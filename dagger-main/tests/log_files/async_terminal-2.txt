@@ -1,0 +1,237 @@
+(robocoin) ubuntu@Workstation:~/Desktop/Workspace/lerobot_policy_deploy/lerobotv3$ python dagger/async_inference_client.py     --config dagger/config/dagger_params.yaml     --f-exec 30     --max-steps 1000     --enable-recording     --repo-id "local/test_recording_phase2b-1"     --dataset-root "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/data/260212_async1"
+[AsyncClient] 相机预热中...
+current c api version:  1.1.1
+[AsyncClient] 机械臂已连接
+[Gripper] JSON socket 已连接 192.168.1.18:8080
+[Gripper] RM+ 生态已开启 (波特率=115200)
+[AsyncClient] 夹爪连续模式: deadband=20
+[rm_set_realtime_push] set_realtime_push revice error
+[UDP Push] SDK 返回码: -2，尝试 TCP fallback...
+[UDP Push] 已开启（TCP fallback）: 192.168.1.100:8089
+[UDPStateReceiver] 已启动，监听端口 8089
+[AsyncClient] UDP 状态接收已就绪
+[DIAG-STATE-AC] #1: gripper=1.0010, gripper_raw_udp=None, source=TCP
+[AsyncClient] 连接 PolicyServer: 127.0.0.1:50051
+[AsyncClient] PolicyServer 连接成功
+
+============================================================
+AsyncInferenceClient [真机模式]
+============================================================
+服务器: 127.0.0.1:50051
+执行频率: 30.0 Hz (T_step=0.0333s)
+推理间隔: T_inter=0.0s
+Hold on empty: True
+任务: pick up the yellow banana and put it in the white plate
+============================================================
+按回车开始...
+[AsyncClient] 推理线程启动
+[AsyncClient] 运行中... (Ctrl+C 停止)
+[Warmup] 使用配置的 t_inf=0.200s
+[DIAG-STATE-AC] #2: gripper=1.0000, gripper_raw_udp=1000, source=UDP
+[DIAG-STATE-AC] #3: gripper=1.0000, gripper_raw_udp=1000, source=UDP
+[TIMING-EXEC-AC] #1: state_update=0.10ms, pop=0.01ms, execute=0.00ms, total_work=0.11ms, HOLD, buf=0, actual_hz=9286.6
+[DIAG-OBS-AC] #1: gripper=1.0000, must_go=True, timestep=1
+[DIAG-STATE-AC] #4: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #2: state_update=0.03ms, pop=0.00ms, execute=0.00ms, total_work=0.04ms, HOLD, buf=0, actual_hz=59.8
+[DIAG-STATE-AC] #5: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #3: state_update=0.03ms, pop=0.00ms, execute=0.00ms, total_work=0.03ms, HOLD, buf=0, actual_hz=44.9
+[DIAG-STATE-AC] #6: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #4: state_update=0.02ms, pop=0.00ms, execute=0.00ms, total_work=0.03ms, HOLD, buf=0, actual_hz=39.9
+[DIAG-STATE-AC] #7: gripper=1.0000, gripper_raw_udp=1000, source=UDP
+[TIMING-EXEC-AC] #5: state_update=0.02ms, pop=0.00ms, execute=0.00ms, total_work=0.03ms, HOLD, buf=0, actual_hz=37.4
+[DIAG-STATE-AC] #8: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #6: state_update=0.02ms, pop=0.00ms, execute=0.00ms, total_work=0.03ms, HOLD, buf=0, actual_hz=35.9
+[DIAG-STATE-AC] #9: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #7: state_update=0.02ms, pop=0.00ms, execute=0.00ms, total_work=0.02ms, HOLD, buf=0, actual_hz=34.9
+[DIAG-STATE-AC] #10: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #8: state_update=0.02ms, pop=0.00ms, execute=0.00ms, total_work=0.02ms, HOLD, buf=0, actual_hz=34.2
+[DIAG-STATE-AC] #11: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[TIMING-EXEC-AC] #9: state_update=0.03ms, pop=0.00ms, execute=0.00ms, total_work=0.03ms, HOLD, buf=0, actual_hz=33.7
+[DIAG-STATE-AC] #12: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #10: state_update=0.03ms, pop=0.00ms, execute=0.00ms, total_work=0.04ms, HOLD, buf=0, actual_hz=33.3
+[DIAG-STATE-AC] #13: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[DIAG-STATE-AC] #14: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+
+[AsyncClient] 已从 Server 获取配置:
+  任务: pick up the yellow banana and put it in the white plate
+  动作空间: joints
+  动作类型: delta
+
+[Warmup] chunk_size探测: t_inf=0.366s, chunk_size=50
+
+============================================================
+[Parameters] === Phase 1.5B 参数推导 ===
+============================================================
+  模型 chunk_size (L):       50
+  有效 chunk_size (L_eff):   50
+  n_action_steps:            0 (全部)
+  执行频率 (f_exec):         30.0 Hz
+  执行步长 (T_step):         0.0333s
+  推理延迟 (t_inf):          0.200s
+  延迟消耗步数 (K_inf):      6
+  有效 action 数 (L_valid):  44
+  最大推理间隔 (T_inter_max):1.467s
+  实际推理间隔 (T_inter):    1.173s (自动推导)
+  Buffer 安全网阈值:         6
+  稳定性约束:                PASS
+============================================================
+
+[DIAG-STATE-AC] #15: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[DIAG-OBS-AC] #2: gripper=1.0020, must_go=True, timestep=12
+[DIAG-STATE-AC] #16: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[TIMING-INFER-AC] #1: obs=11.16ms, pickle=1.46ms, grpc=24.86ms, parse=0.20ms, buf_update=0.01ms, t_inf_total=37.7ms, K_inf=26, valid=24, buf=24, ema=37.7ms
+[DIAG-ACT-AC] infer#1: K_inf=26, chunk=50, valid=24
+  obs_gripper=1.0020
+  gripper_all:   min=0.9972, max=1.0024, first5=['0.999', '0.998', '0.998', '0.997', '0.997']
+  gripper_valid: min=0.9975, max=1.0024, first5=['0.999', '0.999', '0.999', '0.998', '0.998']
+[DIAG-STATE-AC] #17: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+WARNING:dagger.core.data_recorder:数据集目录已存在，清理旧数据: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/data/260212_async1/local/test_recording_phase2b-1
+[AsyncClient] 录制已启动: repo_id=local/test_recording_phase2b-1, policy_action_dim=8
+[DIAG-STATE-AC] #18: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[DIAG-EXEC-AC] #1: action.gripper=0.9993, gripper_sdk=999, obs_gripper=1.0010, delta=-0.0017, timestamp=23346.218
+[DIAG-STATE-AC] #19: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[DIAG-EXEC-AC] #2: action.gripper=0.9988, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0032, timestamp=23346.251
+[DIAG-STATE-AC] #20: gripper=1.0020, gripper_raw_udp=1002, source=UDP
+[DIAG-EXEC-AC] #3: action.gripper=0.9988, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0032, timestamp=23346.285
+[DIAG-OBS-AC] #3: gripper=1.0020, must_go=False, timestep=16
+[TIMING-INFER-AC] #2: obs=97.50ms, pickle=1.58ms, grpc=22.30ms, parse=0.21ms, buf_update=0.01ms, t_inf_total=121.6ms, K_inf=28, valid=22, buf=22, ema=62.9ms
+[DIAG-ACT-AC] infer#2: K_inf=28, chunk=50, valid=22
+  obs_gripper=1.0020
+  gripper_all:   min=0.9974, max=1.0028, first5=['0.999', '0.998', '0.998', '0.998', '0.997']
+  gripper_valid: min=0.9979, max=1.0028, first5=['0.999', '0.999', '0.999', '0.999', '0.998']
+[DIAG-EXEC-AC] #4: action.gripper=0.9993, gripper_sdk=999, obs_gripper=1.0010, delta=-0.0017, timestamp=23346.330
+[DIAG-EXEC-AC] #5: action.gripper=0.9989, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0031, timestamp=23346.363
+[DIAG-EXEC-AC] #6: action.gripper=0.9989, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0021, timestamp=23346.397
+[DIAG-EXEC-AC] #7: action.gripper=0.9988, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0032, timestamp=23346.430
+[DIAG-EXEC-AC] #8: action.gripper=0.9985, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0035, timestamp=23346.463
+[DIAG-EXEC-AC] #9: action.gripper=0.9985, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0035, timestamp=23346.497
+[DIAG-EXEC-AC] #10: action.gripper=0.9984, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0026, timestamp=23346.531
+[DIAG-EXEC-AC] #11: action.gripper=0.9982, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0028, timestamp=23346.564
+[DIAG-EXEC-AC] #12: action.gripper=0.9981, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0029, timestamp=23346.597
+[DIAG-EXEC-AC] #13: action.gripper=0.9980, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0030, timestamp=23346.631
+[DIAG-EXEC-AC] #14: action.gripper=0.9981, gripper_sdk=998, obs_gripper=1.0020, delta=-0.0039, timestamp=23346.664
+[DIAG-EXEC-AC] #15: action.gripper=0.9979, gripper_sdk=997, obs_gripper=1.0010, delta=-0.0031, timestamp=23346.698
+[DIAG-EXEC-AC] #16: action.gripper=0.9979, gripper_sdk=997, obs_gripper=1.0020, delta=-0.0041, timestamp=23346.731
+[DIAG-EXEC-AC] #17: action.gripper=0.9980, gripper_sdk=997, obs_gripper=1.0020, delta=-0.0040, timestamp=23346.764
+[DIAG-EXEC-AC] #18: action.gripper=0.9983, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0027, timestamp=23346.798
+[DIAG-EXEC-AC] #19: action.gripper=0.9987, gripper_sdk=998, obs_gripper=1.0010, delta=-0.0023, timestamp=23346.831
+[DIAG-EXEC-AC] #20: action.gripper=0.9991, gripper_sdk=999, obs_gripper=1.0010, delta=-0.0019, timestamp=23346.865
+[DIAG-OBS-AC] #4: gripper=1.0010, must_go=False, timestep=33
+[TIMING-INFER-AC] #3: obs=56.86ms, pickle=1.41ms, grpc=19.49ms, parse=0.18ms, buf_update=0.01ms, t_inf_total=77.9ms, K_inf=27, valid=23, buf=23, ema=67.4ms
+[DIAG-ACT-AC] infer#3: K_inf=27, chunk=50, valid=23
+  obs_gripper=1.0010
+  gripper_all:   min=0.9965, max=1.0046, first5=['0.998', '0.997', '0.996', '0.997', '0.997']
+  gripper_valid: min=0.9998, max=1.0046, first5=['1.001', '1.001', '1.001', '1.000', '1.001']
+[DIAG-OBS-AC] #5: gripper=1.0010, must_go=False, timestep=52
+[TIMING-INFER-AC] #4: obs=59.19ms, pickle=1.38ms, grpc=18.46ms, parse=0.19ms, buf_update=0.01ms, t_inf_total=79.2ms, K_inf=27, valid=23, buf=23, ema=70.9ms
+[DIAG-ACT-AC] infer#4: K_inf=27, chunk=50, valid=23
+  obs_gripper=1.0020
+  gripper_all:   min=0.9965, max=1.0004, first5=['1.000', '0.999', '0.998', '0.998', '0.998']
+  gripper_valid: min=0.9967, max=0.9992, first5=['0.997', '0.997', '0.997', '0.997', '0.997']
+[DIAG-EXEC-AC] #50: action.gripper=0.9976, gripper_sdk=997, obs_gripper=1.0020, delta=-0.0044, timestamp=23347.898
+[DIAG-OBS-AC] #6: gripper=1.0020, must_go=False, timestep=71
+[TIMING-INFER-AC] #5: obs=65.52ms, pickle=1.56ms, grpc=19.99ms, parse=0.19ms, buf_update=0.01ms, t_inf_total=87.3ms, K_inf=27, valid=23, buf=23, ema=75.8ms
+[DIAG-ACT-AC] infer#5: K_inf=27, chunk=50, valid=23
+  obs_gripper=1.0020
+  gripper_all:   min=0.9956, max=0.9987, first5=['0.999', '0.997', '0.997', '0.997', '0.997']
+  gripper_valid: min=0.9956, max=0.9963, first5=['0.996', '0.996', '0.996', '0.996', '0.996']
+[DIAG-OBS-AC] #7: gripper=1.0020, must_go=False, timestep=89
+[DIAG-ACT-AC] infer#6: K_inf=27, chunk=50, valid=23
+  obs_gripper=1.0020
+  gripper_all:   min=0.9966, max=1.0009, first5=['0.998', '0.997', '0.997', '0.997', '0.997']
+  gripper_valid: min=0.9976, max=1.0009, first5=['0.998', '0.998', '0.998', '0.998', '0.998']
+[DIAG-STATE-AC] #100: gripper=1.0010, gripper_raw_udp=1001, source=UDP
+[TIMING-EXEC-AC] #100: state_update=0.03ms, pop=0.00ms, execute=0.17ms, total_work=0.20ms, EXEC, buf=12, actual_hz=19.8
+Frame 100, FPS=19.6, Exec=87, Hold=0, Infer=6, Buf=12
+[DIAG-OBS-AC] #8: gripper=1.0020, must_go=False, timestep=107
+[DIAG-ACT-AC] infer#7: K_inf=26, chunk=50, valid=24
+  obs_gripper=1.0020
+  gripper_all:   min=0.9777, max=1.0007, first5=['0.999', '0.998', '0.997', '0.997', '0.997']
+  gripper_valid: min=0.9777, max=1.0007, first5=['0.999', '0.998', '0.998', '0.998', '0.998']
+[DIAG-EXEC-AC] #100: action.gripper=0.9980, gripper_sdk=997, obs_gripper=1.0020, delta=-0.0040, timestamp=23350.166
+[DIAG-OBS-AC] #9: gripper=1.0020, must_go=False, timestep=126
+[DIAG-ACT-AC] infer#8: K_inf=27, chunk=50, valid=23
+  obs_gripper=1.0020
+  gripper_all:   min=0.7203, max=1.0007, first5=['1.000', '0.999', '0.999', '0.998', '0.998']
+  gripper_valid: min=0.7203, max=1.0007, first5=['0.999', '0.998', '0.998', '0.998', '0.998']
+[DIAG-OBS-AC] #10: gripper=1.0010, must_go=False, timestep=144
+[DIAG-ACT-AC] infer#9: K_inf=26, chunk=50, valid=24
+  obs_gripper=1.0010
+  gripper_all:   min=0.4220, max=0.9989, first5=['0.999', '0.998', '0.997', '0.997', '0.996']
+  gripper_valid: min=0.4220, max=0.4863, first5=['0.486', '0.433', '0.423', '0.422', '0.423']
+[DIAG-EXEC-AC] #150: action.gripper=0.4326, gripper_sdk=432, obs_gripper=0.4320, delta=0.0006, timestamp=23352.501
+[DIAG-OBS-AC] #11: gripper=0.4320, must_go=False, timestep=163
+[TIMING-INFER-AC] #10: obs=24.35ms, pickle=1.54ms, grpc=21.39ms, parse=0.18ms, buf_update=0.01ms, t_inf_total=47.5ms, K_inf=26, valid=24, buf=24, ema=58.2ms
+[DIAG-ACT-GRIP-AC] infer#10: obs_grip=0.4320, K_inf=26, valid=24, grip_valid: min=0.4263, max=0.4365, first3=['0.435', '0.435', '0.435']
+[DIAG-OBS-AC] #12: gripper=0.4320, must_go=False, timestep=182
+[DIAG-STATE-AC] #200: gripper=0.4330, gripper_raw_udp=433, source=UDP
+[TIMING-EXEC-AC] #200: state_update=0.03ms, pop=0.00ms, execute=0.15ms, total_work=0.19ms, EXEC, buf=6, actual_hz=20.6
+Frame 200, FPS=20.5, Exec=187, Hold=0, Infer=11, Buf=6
+[DIAG-OBS-AC] #13: gripper=0.4320, must_go=False, timestep=201
+[DIAG-EXEC-AC] #200: action.gripper=0.4389, gripper_sdk=438, obs_gripper=0.4320, delta=0.0069, timestamp=23354.836
+[DIAG-OBS-AC] #14: gripper=0.4320, must_go=False, timestep=220
+[DIAG-OBS-AC] #15: gripper=0.4320, must_go=False, timestep=239
+[DIAG-OBS-AC] #16: gripper=0.9920, must_go=False, timestep=258
+[DIAG-EXEC-AC] #250: action.gripper=1.0020, gripper_sdk=1000, obs_gripper=0.9970, delta=0.0050, timestamp=23357.138
+[DIAG-OBS-AC] #17: gripper=0.9990, must_go=False, timestep=277
+^C
+[AsyncClient] 用户中断，共执行 281 帧
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 268/268 [00:00<00:00, 3298.55 examples/s]
+Creating parquet from Arrow format: 100%|██████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 833.20ba/s]
+[DIAG-STATE-AC] #300: gripper=0.9970, gripper_raw_udp=997, source=UDP
+[DIAG-OBS-AC] #18: gripper=0.9970, must_go=False, timestep=281
+[DIAG-OBS-AC] #19: gripper=0.9990, must_go=False, timestep=281
+[DIAG-OBS-AC] #20: gripper=0.9990, must_go=False, timestep=281
+[libx264 @ 0x323343c0] frame I:134   Avg QP:30.12  size:  7810
+[libx264 @ 0x323343c0] frame P:134   Avg QP:34.75  size:   726
+[libx264 @ 0x323343c0] mb I  I16..4: 17.6% 62.5% 19.9%
+[libx264 @ 0x323343c0] mb P  I16..4:  0.3%  0.3%  0.0%  P16..4: 36.2%  2.4%  0.9%  0.0%  0.0%    skip:59.8%
+[libx264 @ 0x323343c0] 8x8 transform intra:62.4% inter:85.9%
+[libx264 @ 0x323343c0] coded y,uvDC,uvAC intra: 41.2% 49.3% 13.9% inter: 0.6% 1.0% 0.0%
+[libx264 @ 0x323343c0] i16 v,h,dc,p: 22% 34% 20% 25%
+[libx264 @ 0x323343c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 15% 31%  4% 11%  8%  8%  4%  4%
+[libx264 @ 0x323343c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 15% 19% 26%  4% 14%  7%  9%  2%  2%
+[libx264 @ 0x323343c0] i8c dc,h,v,p: 73% 11% 14%  2%
+[libx264 @ 0x323343c0] Weighted P-Frames: Y:1.5% UV:1.5%
+[libx264 @ 0x323343c0] kb/s:1024.30
+[TIMING-INFER-AC] #20: obs=15.72ms, pickle=1.75ms, grpc=20.35ms, parse=0.17ms, buf_update=0.01ms, t_inf_total=38.0ms, K_inf=26, valid=24, buf=24, ema=44.3ms
+[DIAG-ACT-GRIP-AC] infer#20: obs_grip=0.9990, K_inf=26, valid=24, grip_valid: min=0.9983, max=1.0002, first3=['0.998', '0.998', '0.998']
+[libx264 @ 0x323343c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x323343c0] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x323343c0] 264 - core 165 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=7 lookahead_threads=7 sliced_threads=1 slices=7 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=1 b_pyramid=0 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=2 keyint_min=1 scenecut=40 intra_refresh=0 rc_lookahead=2 rc=crf mbtree=1 crf=30.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[libx264 @ 0x323343c0] frame I:134   Avg QP:31.04  size: 10875
+[libx264 @ 0x323343c0] frame P:134   Avg QP:35.08  size:   295
+[libx264 @ 0x323343c0] mb I  I16..4: 23.9% 45.6% 30.6%
+[libx264 @ 0x323343c0] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  7.9%  1.2%  0.4%  0.0%  0.0%    skip:90.5%
+[libx264 @ 0x323343c0] 8x8 transform intra:45.6% inter:64.2%
+[libx264 @ 0x323343c0] coded y,uvDC,uvAC intra: 54.5% 56.0% 16.1% inter: 0.3% 0.4% 0.0%
+[libx264 @ 0x323343c0] i16 v,h,dc,p:  8% 57%  6% 29%
+[libx264 @ 0x323343c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 29% 22%  5%  3%  5%  4%  6%  6%
+[libx264 @ 0x323343c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 37% 18%  3%  2%  3%  3%  5%  2%
+[libx264 @ 0x323343c0] i8c dc,h,v,p: 65% 18% 14%  2%
+[libx264 @ 0x323343c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x323343c0] kb/s:1340.37
+[AsyncClient] Episode 录制完成，共 1 个 episode
+
+============================================================
+[AsyncClient] === Statistics ===
+  Total steps: 281
+  Actions executed: 268
+  Hold repeats: 0
+  Inferences: 22
+  Avg inference time: 0.057s
+  Avg K_inf: 1.7 actions
+  EMA t_inf: 0.043s (K_inf≈3)
+  Avg FPS: 20.8
+  --- UDP Telemetry ---
+  UDP recv_count: 6908
+  UDP error_count: 0
+  UDP is_receiving: True
+  --- Recording ---
+  Episodes saved: 1
+============================================================
+[AsyncClient] 录制器已关闭
+[UDPStateReceiver] 已停止 (收到 6909 包, 0 错误)
+[AsyncClient] UDP 状态接收已停止
+[Gripper] 控制器已关闭
+[AsyncClient] 已断开连接

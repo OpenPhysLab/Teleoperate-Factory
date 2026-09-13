@@ -1,0 +1,176 @@
+(robocoin) ubuntu@Workstation:~/Desktop/Workspace/lerobot_policy_deploy/lerobotv3$ ros2 launch dagger/launch/dagger.launch.py
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-02-12-18-38-24-966941-Workstation-269302
+[INFO] [launch]: Default logging verbosity is set to INFO
+[DAgger Launch] Using python: /usr/bin/python3
+[DAgger Launch] PYTHONPATH=/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop:/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3:/opt/ros/jazzy/lib/python3.12/site-packages:/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop:/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/install/realman_teleop/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/spacemouse_control_arm/r3kit:/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/spacemouse_control_arm/r3kit
+[INFO] [launch.user]: [DAgger Launch] PolicyServer 启动: type=act, path=/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/RoboCOIN/outputs/pretrained_model_delta_joints_0207_act-150episodes/pretrained_model, device=cuda, port=50051
+[INFO] [launch.user]: [DAgger Launch] ========== Web UI: http://0.0.0.0:5002 ==========
+[INFO] [realman_driver_node-1]: process started with pid [269305]
+[INFO] [vr_input_node-2]: process started with pid [269306]
+[INFO] [camera_node-3]: process started with pid [269307]
+[INFO] [camera_node-4]: process started with pid [269308]
+[INFO] [policy_server-5]: process started with pid [269309]
+[INFO] [dagger_node-6]: process started with pid [269310]
+[INFO] [dagger_control_panel-7]: process started with pid [269311]
+[vr_input_node-2] [INFO] [1770892705.596714927] [vr_input_node]: 启动 ADB 数据源...
+[vr_input_node-2] /usr/lib/python3.12/subprocess.py:1016: RuntimeWarning: line buffering (buffering=1) isn't supported in binary mode, the default buffer size will be used
+[vr_input_node-2]   self.stdout = io.open(c2pread, 'rb', bufsize)
+[vr_input_node-2] /usr/lib/python3.12/subprocess.py:1021: RuntimeWarning: line buffering (buffering=1) isn't supported in binary mode, the default buffer size will be used
+[vr_input_node-2]   self.stderr = io.open(errread, 'rb', bufsize)
+[vr_input_node-2] [INFO] [1770892705.626608669] [vr_input_node]: 数据源 adb 启动成功
+[vr_input_node-2] [INFO] [1770892705.627308382] [vr_input_node]: VR 输入节点已启动
+[vr_input_node-2] [INFO] [1770892705.627744896] [vr_input_node]:   数据源: adb
+[vr_input_node-2] [INFO] [1770892705.628382580] [vr_input_node]:   控制器: right, 发布频率: 100.0Hz
+[dagger_control_panel-7] [INFO] [1770892705.770021627] [dagger_control_panel]: 相机列表: ['cam0_rgb', 'cam1_rgb'], ROS话题名: ['cam0', 'cam1']
+[dagger_control_panel-7] [INFO] [1770892705.770576831] [dagger_control_panel]: Web UI 端口: 5002
+[dagger_control_panel-7]  * Serving Flask app 'control_panel'
+[dagger_control_panel-7]  * Debug mode: off
+[dagger_control_panel-7] [INFO] [1770892705.824186076] [dagger_control_panel]: Web UI 已启动: http://0.0.0.0:5002 (浏览器访问 http://<本机IP>:5002)
+[policy_server-5] <frozen runpy>:128: RuntimeWarning: 'lerobot.extensions.unified_deploy.server.policy_server' found in sys.modules after import of package 'lerobot.extensions.unified_deploy.server', but prior to execution of 'lerobot.extensions.unified_deploy.server.policy_server'; this may result in unpredictable behaviour
+[policy_server-5] 2026-02-12 18:38:26,519 - main - INFO - ============================================================
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - 统一部署 PolicyServer
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - ============================================================
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - 监听地址: 0.0.0.0:50051
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - 策略类型: act
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - 模型路径: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/RoboCOIN/outputs/pretrained_model_delta_joints_0207_act-150episodes/pretrained_model
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - 设备: cuda
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - (action_space 和 is_delta 将从 train_config.json 自动读取)
+[policy_server-5] 2026-02-12 18:38:26,520 - main - INFO - ============================================================
+[policy_server-5] 2026-02-12 18:38:26,520 - UnifiedPolicyServer - INFO - PolicyServer 初始化完成
+[policy_server-5] 2026-02-12 18:38:26,520 - UnifiedPolicyServer - INFO -   策略类型: act
+[policy_server-5] 2026-02-12 18:38:26,520 - UnifiedPolicyServer - INFO - 加载策略适配器: ACTAdapter
+[policy_server-5] [Adapter] 已加载训练配置: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/RoboCOIN/outputs/pretrained_model_delta_joints_0207_act-150episodes/pretrained_model/train_config.json
+[policy_server-5] [Adapter] 从 delta_target 推断 action_space: joints
+[policy_server-5] [Adapter] 检测到 delta_target=joints，使用 delta 模式
+[policy_server-5] [Adapter] 从 train_config 读取 delta_mode: relative
+[policy_server-5] 
+[policy_server-5] [Adapter] 配置摘要:
+[policy_server-5]   - Policy Type: act
+[policy_server-5]   - Action Space: joints
+[policy_server-5]   - Action Type: delta
+[policy_server-5]   - Pretrained Path: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/RoboCOIN/outputs/pretrained_model_delta_joints_0207_act-150episodes/pretrained_model
+[policy_server-5]   - Delta Target: joints
+[policy_server-5]   - Delta Mask: [True, True, True, True, True, True, True, False]
+[policy_server-5] 
+[policy_server-5] 2026-02-12 18:38:26,969 - datasets - INFO - PyTorch version 2.7.1 available.
+[dagger_node-6] [INFO] [1770892706.976179556] [dagger_node]: Subscribing to state: /rm/state_joint_state
+[dagger_node-6] [INFO] [1770892706.977672483] [dagger_node]: Subscribing to camera: /camera/cam0/color/image_raw → key=cam0_rgb
+[dagger_node-6] [INFO] [1770892706.978650474] [dagger_node]: Subscribing to camera: /camera/cam1/color/image_raw → key=cam1_rgb
+[dagger_node-6] [INFO] [1770892706.980237373] [dagger_node]: Recording sync subscriber created: state + 2 cameras, queue_size=30, slop=0.05s, recording_fps=30
+[dagger_node-6] [INFO] [1770892706.989505476] [dagger_node]: DAgger node started (Phase 3C: VR + Policy + Recording)
+[dagger_node-6] [INFO] [1770892706.993707412] [dagger_node]:   Robot IP: 192.168.1.18, Control Hz: 30.0
+[dagger_node-6] [INFO] [1770892706.994950876] [dagger_node]:   VR side: right, trigger threshold: 0.85
+[dagger_node-6] [INFO] [1770892706.996139565] [dagger_node]:   Pose topic: /rm/action_pose
+[dagger_node-6] [INFO] [1770892706.997106986] [dagger_node]:   Joint topic: /rm/action_joint_state
+[dagger_node-6] [INFO] [1770892706.998101890] [dagger_node]:   Policy enabled: True
+[dagger_node-6] [INFO] [1770892706.999022741] [dagger_node]:   Server: 127.0.0.1:50051
+[dagger_node-6] [INFO] [1770892706.999950846] [dagger_node]:   Cameras: ['cam0_rgb', 'cam1_rgb']
+[dagger_node-6] [INFO] [1770892707.000873169] [dagger_node]:   Recording enabled: True
+[dagger_node-6] [INFO] [1770892707.001807005] [dagger_node]:   Repo: local/dagger_realman_0212-test2, root: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/data
+[dagger_node-6] [INFO] [1770892707.002799304] [dagger_node]:   Recording FPS: 30, max_episodes: unlimited
+[dagger_node-6] [INFO] [1770892707.003759050] [dagger_node]:   Safety: max_joint_delta=5.0deg, max_pose_delta=0.02m (reserved, not enforced)
+[dagger_node-6] [INFO] [1770892707.004737532] [dagger_node]:   Mode: IDLE (call /dagger/enable_control to start)
+[realman_driver_node-1] [INFO] [1770892707.930486717] [realman_driver_node]: 🔌 RM+ 生态协议已开启 (波特率=115200)，夹爪控制可用
+[realman_driver_node-1] [INFO] [1770892707.930995351] [realman_driver_node]: 本机 IP: 192.168.1.100，UDP 监听端口: 8089
+[camera_node-4] [INFO] [1770892708.123375158] [camera_node_cam1]: 📷 启动相机 [cam1] serial=420122071413 → /camera/cam1/color/image_raw
+[camera_node-3] [INFO] [1770892708.123938086] [camera_node_cam0]: 📷 启动相机 [cam0] serial=230422272673 rotate=180° → /camera/cam0/color/image_raw
+[policy_server-5] [ACTAdapter] 加载模型: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/RoboCOIN/outputs/pretrained_model_delta_joints_0207_act-150episodes/pretrained_model
+[realman_driver_node-1] [INFO] [1770892708.554018235] [realman_driver_node]: 机械臂 UDP 上报已开启，周期: 5ms (200Hz)
+[realman_driver_node-1] [INFO] [1770892708.561185644] [realman_driver_node]: 驱动节点已启动（关节同步 + 夹爪异步）
+[realman_driver_node-1] [WARN] [1770892708.561935885] [realman_driver_node]: ⚠️ 真机模式：跟随已禁用，请在 Web UI 点击「启用跟随」按钮
+[realman_driver_node-1] [INFO] [1770892708.581629987] [realman_driver_node]: [DIAG-DRIVER-STATE] #1: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.591008121] [realman_driver_node]: [DIAG-DRIVER-STATE] #2: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.598316694] [realman_driver_node]: [DIAG-DRIVER-STATE] #3: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.605240161] [realman_driver_node]: [DIAG-DRIVER-STATE] #4: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.617296094] [realman_driver_node]: [DIAG-DRIVER-STATE] #5: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.629447160] [realman_driver_node]: [DIAG-DRIVER-STATE] #6: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.635353080] [realman_driver_node]: [DIAG-DRIVER-STATE] #7: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.649494455] [realman_driver_node]: [DIAG-DRIVER-STATE] #8: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.655280053] [realman_driver_node]: [DIAG-DRIVER-STATE] #9: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.669341423] [realman_driver_node]: [DIAG-DRIVER-STATE] #10: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.675148993] [realman_driver_node]: [DIAG-DRIVER-STATE] #11: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.689538628] [realman_driver_node]: [DIAG-DRIVER-STATE] #12: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.695248479] [realman_driver_node]: [DIAG-DRIVER-STATE] #13: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.712193636] [realman_driver_node]: [DIAG-DRIVER-STATE] #14: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.727567714] [realman_driver_node]: [DIAG-DRIVER-STATE] #15: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.757621589] [realman_driver_node]: [DIAG-DRIVER-STATE] #16: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.771194404] [realman_driver_node]: [DIAG-DRIVER-STATE] #17: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.778288231] [realman_driver_node]: [DIAG-DRIVER-STATE] #18: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.785360697] [realman_driver_node]: [DIAG-DRIVER-STATE] #19: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.795303223] [realman_driver_node]: [DIAG-DRIVER-STATE] #20: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.813474651] [realman_driver_node]: [DIAG-DRIVER-STATE] #21: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.822674951] [realman_driver_node]: [DIAG-DRIVER-STATE] #22: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.831982349] [realman_driver_node]: [DIAG-DRIVER-STATE] #23: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.843315604] [realman_driver_node]: [DIAG-DRIVER-STATE] #24: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.854589344] [realman_driver_node]: [DIAG-DRIVER-STATE] #25: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.866061207] [realman_driver_node]: [DIAG-DRIVER-STATE] #26: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.881680539] [realman_driver_node]: [DIAG-DRIVER-STATE] #27: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[policy_server-5] Loading weights from local directory
+[realman_driver_node-1] [INFO] [1770892708.889124233] [realman_driver_node]: [DIAG-DRIVER-STATE] #28: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.899422487] [realman_driver_node]: [DIAG-DRIVER-STATE] #29: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.930229207] [realman_driver_node]: [DIAG-DRIVER-STATE] #30: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.948704072] [realman_driver_node]: [DIAG-DRIVER-STATE] #31: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.979793459] [realman_driver_node]: [DIAG-DRIVER-STATE] #32: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892708.997932013] [realman_driver_node]: [DIAG-DRIVER-STATE] #33: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.020014572] [realman_driver_node]: [DIAG-DRIVER-STATE] #34: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.044213323] [realman_driver_node]: [DIAG-DRIVER-STATE] #35: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.064550868] [realman_driver_node]: [DIAG-DRIVER-STATE] #36: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.076440989] [realman_driver_node]: [DIAG-DRIVER-STATE] #37: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[policy_server-5] [ACTAdapter] 模型已加载到 cuda
+[policy_server-5] [ACTAdapter] chunk_size=50, state_dim=8, action_dim=8
+[policy_server-5] [ACTAdapter] action_space=joints, is_delta=True
+[policy_server-5] 2026-02-12 18:38:29,110 - UnifiedPolicyServer - INFO - 策略加载完成
+[policy_server-5] 2026-02-12 18:38:29,110 - main - INFO - [从 train_config.json 读取]
+[policy_server-5] 2026-02-12 18:38:29,110 - main - INFO -   action_space: joints
+[policy_server-5] 2026-02-12 18:38:29,110 - main - INFO -   is_delta_model: True
+[policy_server-5] 2026-02-12 18:38:29,114 - main - INFO - PolicyServer 已启动，监听 0.0.0.0:50051
+[realman_driver_node-1] [INFO] [1770892709.121278767] [realman_driver_node]: [DIAG-DRIVER-STATE] #38: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.132956678] [realman_driver_node]: [DIAG-DRIVER-STATE] #39: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.144379845] [realman_driver_node]: [DIAG-DRIVER-STATE] #40: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.166264592] [realman_driver_node]: [DIAG-DRIVER-STATE] #41: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.186293861] [realman_driver_node]: [DIAG-DRIVER-STATE] #42: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.204324515] [realman_driver_node]: [DIAG-DRIVER-STATE] #43: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.228535159] [realman_driver_node]: [DIAG-DRIVER-STATE] #44: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.241017545] [realman_driver_node]: [DIAG-DRIVER-STATE] #45: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.253186294] [realman_driver_node]: [DIAG-DRIVER-STATE] #46: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.275746427] [realman_driver_node]: [DIAG-DRIVER-STATE] #47: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.0000, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892709.277094002] [realman_driver_node]: 🏠 开始移动到 home 位姿: [-0.263, -0.505, -0.157, 43.953, 1.225, 121.751, -0.187]
+[realman_driver_node-1] [INFO] [1770892711.431178150] [realman_driver_node]: ✅ 机械臂已到达 home 位置，夹爪已张开
+[realman_driver_node-1] [INFO] [1770892711.438462294] [realman_driver_node]: [DIAG-DRIVER-STATE] #48: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.5820, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892711.453544324] [realman_driver_node]: [DIAG-DRIVER-STATE] #49: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.5820, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892711.463297281] [realman_driver_node]: [DIAG-DRIVER-STATE] #50: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.5820, last_gripper_cmd=None
+[realman_driver_node-1] [INFO] [1770892711.956327132] [realman_driver_node]: [DIAG-DRIVER-STATE] #100: gripper_open=0.5810, source=TCP_actpos, gripper_open_udp=0.8970, last_gripper_cmd=None
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[policy_server-5] 2026-02-12 18:38:32,420 - main - INFO - 收到中断信号，正在停止...
+[policy_server-5] 2026-02-12 18:38:32,421 - UnifiedPolicyServer - INFO - 服务器已停止
+[policy_server-5] 2026-02-12 18:38:32,422 - main - INFO - 服务器已终止
+[dagger_node-6] [INFO] [1770892712.421398554] [dagger_node]: Shutting down DAgger node...
+[dagger_node-6] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[vr_input_node-2] [INFO] [1770892712.421508987] [vr_input_node]: 正在关闭 VR 输入节点...
+[vr_input_node-2] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[realman_driver_node-1] [INFO] [1770892712.427814218] [realman_driver_node]: 🛑 正在关闭驱动节点...
+[realman_driver_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [VRCoordinateTransform] 旋转映射方案: perm_xyz_pnn
+[dagger_node-6]   描述: 【当前使用】xyz + signs(1,-1,-1): VR_X→X, VR_Y→-Y, VR_Z→-Z
+[dagger_node-6]   正负号: [ 1 -1 -1]
+[dagger_node-6] [DIAG-ON-STATE] #1: gripper=0.5810, prev=N/A, t=26219.394
+[dagger_node-6] [DIAG-ON-STATE] #2: gripper=0.5810, prev=0.5810, t=26219.404
+[dagger_node-6] [DIAG-ON-STATE] #3: gripper=0.5810, prev=0.5810, t=26219.411
+[dagger_node-6] [DIAG-ON-STATE] #4: gripper=0.5810, prev=0.5810, t=26219.418
+[dagger_node-6] [DIAG-ON-STATE] #5: gripper=0.5810, prev=0.5810, t=26219.430
+[dagger_node-6] [DIAG-ON-STATE] #6: gripper=0.5810, prev=0.5810, t=26219.442
+[dagger_node-6] [DIAG-ON-STATE] #7: gripper=0.5810, prev=0.5810, t=26219.448
+[dagger_node-6] [DIAG-ON-STATE] #8: gripper=0.5810, prev=0.5810, t=26219.462
+[dagger_node-6] [DIAG-ON-STATE] #9: gripper=0.5810, prev=0.5810, t=26219.468
+[dagger_node-6] [DIAG-ON-STATE] #10: gripper=0.5810, prev=0.5810, t=26219.482
+[dagger_node-6] [DIAG-ON-STATE] #11: gripper=0.5810, prev=0.5810, t=26219.488
+[dagger_node-6] [DIAG-ON-STATE] #12: gripper=0.5810, prev=0.5810, t=26219.502
+[dagger_node-6] [DIAG-ON-STATE] #13: gripper=0.5810, prev=0.5810, t=26219.508
+[dagger_node-6] [DIAG-ON-STATE] #14: gripper=0.5810, prev=0.5810, t=26219.525
+[dagger_node-6] [DIAG-ON-STATE] #15: gripper=0.5810, prev=0.5810, t=26219.540
+[dagger_node-6] [DIAG-ON-STATE] #16: gripper=0.5810, prev=0.5810, t=26219.570
+[dagger_node-6] [DIAG-ON-STATE] #17: gripper=0.5810, prev=0.5810, t=26219.584
+[dagger_node-6] [DIAG-ON-STATE] #18: gripper=0.5810, prev=0.5810, t=26219.591
+[dagger_node-6] [DIAG-ON-STATE] #19: gripper=0.5810, prev=0.5810, t=26219.598
+[dagger_node-6] [DIAG-ON-STATE] #20: gripper=0.5810, prev=0.5810, t=26219.608
+[dagger_node-6] [InferenceBridge] Disconnected

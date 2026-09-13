@@ -1,0 +1,55 @@
+# Dataset and runtime output
+recordings/
+sessions/
+*.jsonl
+*.mp4
+*.avi
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.webm
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local environments and tools
+.venv/
+.venv_*/
+.rm75_python/
+.tools/
+venv/
+env/
+
+# ROS/Catkin generated folders
+build_isolated/
+devel/
+devel_isolated/
+install/
+install_isolated/
+.catkin_workspace
+
+# IDE/editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local logs and secrets
+*.log
+*.out
+*.err
+.env
+.env.*

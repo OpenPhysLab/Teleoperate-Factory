@@ -1,0 +1,28 @@
+<launch>
+  <arg name="start_driver" default="true" />
+  <arg name="robot_backend" default="rm_ros" />
+  <arg name="rm_ip" default="192.168.1.18" />
+  <arg name="rm_port" default="8080" />
+  <arg name="show_rviz" default="true" />
+
+  <group if="$(arg start_driver)">
+    <include file="$(find rm_driver)/launch/rm_75_driver.launch">
+      <arg name="Arm_IP" value="$(arg rm_ip)" />
+      <arg name="Arm_Port" value="$(arg rm_port)" />
+      <arg name="Arm_Dof" value="7" />
+      <arg name="Arm_Type" value="RM75" />
+    </include>
+  </group>
+
+  <node name="teleop_single_rm75_node" pkg="oculus_reader"
+        type="teleop_single_piper.py" output="screen">
+    <rosparam command="load" file="$(find oculus_reader)/config/rm75.yaml" />
+    <param name="robot_backend" value="$(arg robot_backend)" />
+    <param name="rm_ip" value="$(arg rm_ip)" />
+    <param name="rm_port" value="$(arg rm_port)" />
+  </node>
+
+  <node name="pub_pose_node" pkg="oculus_reader" type="pub_pose.py" output="screen" />
+  <node if="$(arg show_rviz)" name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find oculus_reader)/config/oculus_reader.rviz" />
+</launch>

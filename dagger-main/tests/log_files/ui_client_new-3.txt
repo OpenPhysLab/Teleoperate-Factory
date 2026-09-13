@@ -1,0 +1,321 @@
+, send_latency=0.1ms, t=24553.090
+[realman_driver_node-1] [INFO] [1770891042.344142696] [realman_driver_node]: [DIAG-DRIVER-RECV] #279: gripper_float=0.7155, gripper_sdk=715, last_cmd=759, deadband=20, will_send=True, sent/filtered=38/241, t=24553.156
+[realman_driver_node-1] [INFO] [1770891042.345268301] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #38: pos=715, result=0, queue_wait=66.2ms, send_latency=0.1ms, t=24553.157
+[realman_driver_node-1] [INFO] [1770891042.377558548] [realman_driver_node]: [DIAG-DRIVER-RECV] #280: gripper_float=0.6949, gripper_sdk=694, last_cmd=715, deadband=20, will_send=True, sent/filtered=39/241, t=24553.189
+[realman_driver_node-1] [INFO] [1770891042.378371896] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #39: pos=694, result=0, queue_wait=32.6ms, send_latency=0.1ms, t=24553.190
+[realman_driver_node-1] [INFO] [1770891042.411061253] [realman_driver_node]: [DIAG-DRIVER-RECV] #281: gripper_float=0.6737, gripper_sdk=673, last_cmd=694, deadband=20, will_send=True, sent/filtered=40/241, t=24553.223
+[realman_driver_node-1] [INFO] [1770891042.411742914] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #40: pos=673, result=0, queue_wait=33.0ms, send_latency=0.1ms, t=24553.224
+[realman_driver_node-1] [INFO] [1770891042.444336742] [realman_driver_node]: [DIAG-DRIVER-RECV] #282: gripper_float=0.6480, gripper_sdk=647, last_cmd=673, deadband=20, will_send=True, sent/filtered=41/241, t=24553.256
+[realman_driver_node-1] [INFO] [1770891042.445528742] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #41: pos=647, result=0, queue_wait=32.8ms, send_latency=0.0ms, t=24553.257
+[realman_driver_node-1] [INFO] [1770891042.511198623] [realman_driver_node]: [DIAG-DRIVER-RECV] #284: gripper_float=0.5998, gripper_sdk=599, last_cmd=647, deadband=20, will_send=True, sent/filtered=42/242, t=24553.323
+[realman_driver_node-1] [INFO] [1770891042.511905161] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #42: pos=599, result=0, queue_wait=65.9ms, send_latency=0.1ms, t=24553.324
+[realman_driver_node-1] [INFO] [1770891042.544981525] [realman_driver_node]: [DIAG-DRIVER-RECV] #285: gripper_float=0.5743, gripper_sdk=574, last_cmd=599, deadband=20, will_send=True, sent/filtered=43/242, t=24553.356
+[realman_driver_node-1] [INFO] [1770891042.547088474] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #43: pos=574, result=0, queue_wait=33.4ms, send_latency=0.5ms, t=24553.358
+[realman_driver_node-1] [INFO] [1770891042.547359142] [realman_driver_node]: [DIAG-DRIVER-STATE] #2400: gripper_act_raw=701, gripper_open=0.5740, gripper_open_udp=0.7010, last_gripper_cmd=574
+[realman_driver_node-1] [INFO] [1770891042.578179688] [realman_driver_node]: [DIAG-DRIVER-RECV] #286: gripper_float=0.5517, gripper_sdk=551, last_cmd=574, deadband=20, will_send=True, sent/filtered=44/242, t=24553.390
+[realman_driver_node-1] [INFO] [1770891042.579090429] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #44: pos=551, result=0, queue_wait=31.3ms, send_latency=0.1ms, t=24553.391
+[realman_driver_node-1] [INFO] [1770891042.611556417] [realman_driver_node]: [DIAG-DRIVER-RECV] #287: gripper_float=0.5228, gripper_sdk=522, last_cmd=551, deadband=20, will_send=True, sent/filtered=45/242, t=24553.423
+[realman_driver_node-1] [INFO] [1770891042.612501282] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #45: pos=522, result=0, queue_wait=32.7ms, send_latency=0.1ms, t=24553.424
+[realman_driver_node-1] [INFO] [1770891042.645072017] [realman_driver_node]: [DIAG-DRIVER-RECV] #288: gripper_float=0.5017, gripper_sdk=501, last_cmd=522, deadband=20, will_send=True, sent/filtered=46/242, t=24553.457
+[realman_driver_node-1] [INFO] [1770891042.646211588] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #46: pos=501, result=0, queue_wait=32.8ms, send_latency=0.5ms, t=24553.458
+[realman_driver_node-1] [INFO] [1770891042.678259790] [realman_driver_node]: [DIAG-DRIVER-RECV] #289: gripper_float=0.4744, gripper_sdk=474, last_cmd=501, deadband=20, will_send=True, sent/filtered=47/242, t=24553.490
+[realman_driver_node-1] [INFO] [1770891042.679052730] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #47: pos=474, result=0, queue_wait=32.3ms, send_latency=0.1ms, t=24553.491
+[realman_driver_node-1] [INFO] [1770891042.711838248] [realman_driver_node]: [DIAG-DRIVER-RECV] #290: gripper_float=0.8995, gripper_sdk=899, last_cmd=474, deadband=20, will_send=True, sent/filtered=48/242, t=24553.523
+[realman_driver_node-1] [INFO] [1770891042.712804804] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #48: pos=899, result=0, queue_wait=33.3ms, send_latency=0.0ms, t=24553.525
+[realman_driver_node-1] [INFO] [1770891042.945941946] [realman_driver_node]: [DIAG-DRIVER-RECV] #297: gripper_float=0.8754, gripper_sdk=875, last_cmd=899, deadband=20, will_send=True, sent/filtered=49/248, t=24553.757
+[realman_driver_node-1] [INFO] [1770891042.946733723] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #49: pos=875, result=0, queue_wait=33.2ms, send_latency=0.1ms, t=24553.758
+[realman_driver_node-1] [INFO] [1770891043.045791855] [realman_driver_node]: [DIAG-DRIVER-RECV] #300: gripper_float=0.8650, gripper_sdk=864, last_cmd=875, deadband=20, will_send=False, sent/filtered=49/251, t=24553.857
+[realman_driver_node-1] [INFO] [1770891043.079180516] [realman_driver_node]: [DIAG-DRIVER-RECV] #301: gripper_float=0.8517, gripper_sdk=851, last_cmd=875, deadband=20, will_send=True, sent/filtered=50/251, t=24553.891
+[realman_driver_node-1] [INFO] [1770891043.080032447] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #50: pos=851, result=0, queue_wait=32.7ms, send_latency=0.0ms, t=24553.892
+[realman_driver_node-1] [INFO] [1770891043.179365556] [realman_driver_node]: [DIAG-DRIVER-RECV] #304: gripper_float=0.8163, gripper_sdk=816, last_cmd=851, deadband=20, will_send=True, sent/filtered=51/253, t=24553.991
+[realman_driver_node-1] [INFO] [1770891043.180262310] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #51: pos=816, result=0, queue_wait=99.6ms, send_latency=0.1ms, t=24553.992
+[realman_driver_node-1] [INFO] [1770891043.246784894] [realman_driver_node]: [DIAG-DRIVER-RECV] #306: gripper_float=0.7802, gripper_sdk=780, last_cmd=816, deadband=20, will_send=True, sent/filtered=52/254, t=24554.058
+[realman_driver_node-1] [INFO] [1770891043.247593163] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #52: pos=780, result=0, queue_wait=66.7ms, send_latency=0.1ms, t=24554.059
+[realman_driver_node-1] [INFO] [1770891043.314523673] [realman_driver_node]: [DIAG-DRIVER-RECV] #308: gripper_float=0.7376, gripper_sdk=737, last_cmd=780, deadband=20, will_send=True, sent/filtered=53/255, t=24554.126
+[realman_driver_node-1] [INFO] [1770891043.315711855] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #53: pos=737, result=0, queue_wait=67.5ms, send_latency=0.1ms, t=24554.127
+[realman_driver_node-1] [INFO] [1770891043.347937742] [realman_driver_node]: [DIAG-DRIVER-RECV] #309: gripper_float=0.7177, gripper_sdk=717, last_cmd=737, deadband=20, will_send=True, sent/filtered=54/255, t=24554.159
+[realman_driver_node-1] [INFO] [1770891043.348742995] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #54: pos=717, result=0, queue_wait=32.4ms, send_latency=0.1ms, t=24554.160
+[realman_driver_node-1] [INFO] [1770891043.381372079] [realman_driver_node]: [DIAG-DRIVER-RECV] #310: gripper_float=0.6887, gripper_sdk=688, last_cmd=717, deadband=20, will_send=True, sent/filtered=55/255, t=24554.193
+[realman_driver_node-1] [INFO] [1770891043.382436829] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #55: pos=688, result=0, queue_wait=33.0ms, send_latency=0.1ms, t=24554.194
+[realman_driver_node-1] [INFO] [1770891043.414983789] [realman_driver_node]: [DIAG-DRIVER-RECV] #311: gripper_float=0.6654, gripper_sdk=665, last_cmd=688, deadband=20, will_send=True, sent/filtered=56/255, t=24554.227
+[realman_driver_node-1] [INFO] [1770891043.416137877] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #56: pos=665, result=0, queue_wait=32.8ms, send_latency=0.4ms, t=24554.228
+[realman_driver_node-1] [INFO] [1770891043.481531530] [realman_driver_node]: [DIAG-DRIVER-RECV] #313: gripper_float=0.6142, gripper_sdk=614, last_cmd=665, deadband=20, will_send=True, sent/filtered=57/256, t=24554.293
+[realman_driver_node-1] [INFO] [1770891043.482495221] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #57: pos=614, result=0, queue_wait=65.9ms, send_latency=0.0ms, t=24554.294
+[realman_driver_node-1] [INFO] [1770891043.514922495] [realman_driver_node]: [DIAG-DRIVER-RECV] #314: gripper_float=0.5873, gripper_sdk=587, last_cmd=614, deadband=20, will_send=True, sent/filtered=58/256, t=24554.326
+[realman_driver_node-1] [INFO] [1770891043.516016822] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #58: pos=587, result=0, queue_wait=32.6ms, send_latency=0.4ms, t=24554.328
+[realman_driver_node-1] [INFO] [1770891043.548167426] [realman_driver_node]: [DIAG-DRIVER-RECV] #315: gripper_float=0.5628, gripper_sdk=562, last_cmd=587, deadband=20, will_send=True, sent/filtered=59/256, t=24554.360
+[realman_driver_node-1] [INFO] [1770891043.549265880] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #59: pos=562, result=0, queue_wait=32.4ms, send_latency=0.1ms, t=24554.361
+[realman_driver_node-1] [INFO] [1770891043.581748159] [realman_driver_node]: [DIAG-DRIVER-RECV] #316: gripper_float=0.5292, gripper_sdk=529, last_cmd=562, deadband=20, will_send=True, sent/filtered=60/256, t=24554.393
+[realman_driver_node-1] [INFO] [1770891043.582652918] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #60: pos=529, result=0, queue_wait=32.7ms, send_latency=0.1ms, t=24554.394
+[realman_driver_node-1] [INFO] [1770891043.615300537] [realman_driver_node]: [DIAG-DRIVER-RECV] #317: gripper_float=0.5085, gripper_sdk=508, last_cmd=529, deadband=20, will_send=True, sent/filtered=61/256, t=24554.427
+[realman_driver_node-1] [INFO] [1770891043.616764237] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #61: pos=508, result=0, queue_wait=32.9ms, send_latency=0.6ms, t=24554.428
+[realman_driver_node-1] [INFO] [1770891043.648541210] [realman_driver_node]: [DIAG-DRIVER-RECV] #318: gripper_float=0.4822, gripper_sdk=482, last_cmd=508, deadband=20, will_send=True, sent/filtered=62/256, t=24554.460
+[realman_driver_node-1] [INFO] [1770891043.649553813] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #62: pos=482, result=0, queue_wait=32.1ms, send_latency=0.2ms, t=24554.461
+[realman_driver_node-1] [INFO] [1770891043.681995034] [realman_driver_node]: [DIAG-DRIVER-RECV] #319: gripper_float=0.8332, gripper_sdk=833, last_cmd=482, deadband=20, will_send=True, sent/filtered=63/256, t=24554.494
+[realman_driver_node-1] [INFO] [1770891043.682939398] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #63: pos=833, result=0, queue_wait=32.8ms, send_latency=0.1ms, t=24554.495
+[realman_driver_node-1] [INFO] [1770891043.783222792] [realman_driver_node]: [DIAG-DRIVER-RECV] #322: gripper_float=0.7994, gripper_sdk=799, last_cmd=833, deadband=20, will_send=True, sent/filtered=64/258, t=24554.595
+[realman_driver_node-1] [INFO] [1770891043.784105791] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #64: pos=799, result=0, queue_wait=0.4ms, send_latency=0.1ms, t=24554.596
+[vr_input_node-2] [INFO] [1770891043.819371419] [vr_input_node]: [VR 输入] USB/ADB | 正常 | 已接收: 2133 条 | 错误: 0 次
+[realman_driver_node-1] [INFO] [1770891043.849838321] [realman_driver_node]: [DIAG-DRIVER-RECV] #324: gripper_float=0.7736, gripper_sdk=773, last_cmd=799, deadband=20, will_send=True, sent/filtered=65/259, t=24554.661
+[realman_driver_node-1] [INFO] [1770891043.850546381] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #65: pos=773, result=0, queue_wait=66.0ms, send_latency=0.1ms, t=24554.662
+[realman_driver_node-1] [INFO] [1770891043.916536134] [realman_driver_node]: [DIAG-DRIVER-RECV] #326: gripper_float=0.7456, gripper_sdk=745, last_cmd=773, deadband=20, will_send=True, sent/filtered=66/260, t=24554.728
+[realman_driver_node-1] [INFO] [1770891043.917229847] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #66: pos=745, result=0, queue_wait=66.2ms, send_latency=0.1ms, t=24554.729
+[realman_driver_node-1] [INFO] [1770891043.983388537] [realman_driver_node]: [DIAG-DRIVER-RECV] #328: gripper_float=0.7253, gripper_sdk=725, last_cmd=745, deadband=20, will_send=True, sent/filtered=67/261, t=24554.795
+[realman_driver_node-1] [INFO] [1770891043.984260525] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #67: pos=725, result=0, queue_wait=66.5ms, send_latency=0.1ms, t=24554.796
+[realman_driver_node-1] [INFO] [1770891044.051303937] [realman_driver_node]: [DIAG-DRIVER-RECV] #330: gripper_float=0.6940, gripper_sdk=693, last_cmd=725, deadband=20, will_send=True, sent/filtered=68/262, t=24554.863
+[realman_driver_node-1] [INFO] [1770891044.052188930] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #68: pos=693, result=0, queue_wait=67.3ms, send_latency=0.2ms, t=24554.864
+[realman_driver_node-1] [INFO] [1770891044.118039962] [realman_driver_node]: [DIAG-DRIVER-RECV] #332: gripper_float=0.6693, gripper_sdk=669, last_cmd=693, deadband=20, will_send=True, sent/filtered=69/263, t=24554.930
+[realman_driver_node-1] [INFO] [1770891044.118812063] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #69: pos=669, result=0, queue_wait=66.1ms, send_latency=0.1ms, t=24554.931
+[realman_driver_node-1] [INFO] [1770891044.184763503] [realman_driver_node]: [DIAG-DRIVER-RECV] #334: gripper_float=0.6403, gripper_sdk=640, last_cmd=669, deadband=20, will_send=True, sent/filtered=70/264, t=24554.996
+[realman_driver_node-1] [INFO] [1770891044.185991531] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #70: pos=640, result=0, queue_wait=66.6ms, send_latency=0.1ms, t=24554.998
+[realman_driver_node-1] [INFO] [1770891044.251575220] [realman_driver_node]: [DIAG-DRIVER-RECV] #336: gripper_float=0.6100, gripper_sdk=609, last_cmd=640, deadband=20, will_send=True, sent/filtered=71/265, t=24555.063
+[realman_driver_node-1] [INFO] [1770891044.252337022] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #71: pos=609, result=0, queue_wait=65.8ms, send_latency=0.1ms, t=24555.064
+[realman_driver_node-1] [INFO] [1770891044.285079168] [realman_driver_node]: [DIAG-DRIVER-RECV] #337: gripper_float=0.5892, gripper_sdk=589, last_cmd=609, deadband=20, will_send=True, sent/filtered=72/265, t=24555.097
+[realman_driver_node-1] [INFO] [1770891044.286659287] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #72: pos=589, result=0, queue_wait=33.6ms, send_latency=0.1ms, t=24555.098
+[realman_driver_node-1] [INFO] [1770891044.351846371] [realman_driver_node]: [DIAG-DRIVER-RECV] #339: gripper_float=0.5555, gripper_sdk=555, last_cmd=589, deadband=20, will_send=True, sent/filtered=73/266, t=24555.163
+[realman_driver_node-1] [INFO] [1770891044.352716817] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #73: pos=555, result=0, queue_wait=65.5ms, send_latency=0.1ms, t=24555.164
+[realman_driver_node-1] [INFO] [1770891044.418684358] [realman_driver_node]: [DIAG-DRIVER-RECV] #341: gripper_float=0.5309, gripper_sdk=530, last_cmd=555, deadband=20, will_send=True, sent/filtered=74/267, t=24555.230
+[realman_driver_node-1] [INFO] [1770891044.419629704] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #74: pos=530, result=0, queue_wait=66.3ms, send_latency=0.1ms, t=24555.231
+[realman_driver_node-1] [INFO] [1770891044.452109077] [realman_driver_node]: [DIAG-DRIVER-RECV] #342: gripper_float=0.5057, gripper_sdk=505, last_cmd=530, deadband=20, will_send=True, sent/filtered=75/267, t=24555.264
+[realman_driver_node-1] [INFO] [1770891044.452905152] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #75: pos=505, result=0, queue_wait=32.7ms, send_latency=0.1ms, t=24555.265
+[realman_driver_node-1] [INFO] [1770891044.518724876] [realman_driver_node]: [DIAG-DRIVER-RECV] #344: gripper_float=0.4713, gripper_sdk=471, last_cmd=505, deadband=20, will_send=True, sent/filtered=76/268, t=24555.330
+[realman_driver_node-1] [INFO] [1770891044.519786941] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #76: pos=471, result=0, queue_wait=66.1ms, send_latency=0.1ms, t=24555.331
+[realman_driver_node-1] [INFO] [1770891044.545279787] [realman_driver_node]: [DIAG-DRIVER-STATE] #2600: gripper_act_raw=549, gripper_open=0.4710, gripper_open_udp=0.5490, last_gripper_cmd=471
+[realman_driver_node-1] [INFO] [1770891044.552047282] [realman_driver_node]: [DIAG-DRIVER-RECV] #345: gripper_float=0.4448, gripper_sdk=444, last_cmd=471, deadband=20, will_send=True, sent/filtered=77/268, t=24555.364
+[realman_driver_node-1] [INFO] [1770891044.552860851] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #77: pos=444, result=0, queue_wait=32.5ms, send_latency=0.1ms, t=24555.365
+[realman_driver_node-1] [INFO] [1770891044.618936024] [realman_driver_node]: [DIAG-DRIVER-RECV] #347: gripper_float=0.4247, gripper_sdk=424, last_cmd=444, deadband=20, will_send=True, sent/filtered=78/269, t=24555.430
+[realman_driver_node-1] [INFO] [1770891044.619890948] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #78: pos=424, result=0, queue_wait=66.4ms, send_latency=0.1ms, t=24555.431
+[realman_driver_node-1] [INFO] [1770891044.652431185] [realman_driver_node]: [DIAG-DRIVER-RECV] #348: gripper_float=0.7625, gripper_sdk=762, last_cmd=424, deadband=20, will_send=True, sent/filtered=79/269, t=24555.464
+[realman_driver_node-1] [INFO] [1770891044.653673249] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #79: pos=762, result=0, queue_wait=32.8ms, send_latency=0.3ms, t=24555.465
+[realman_driver_node-1] [INFO] [1770891044.719149887] [realman_driver_node]: [DIAG-DRIVER-RECV] #350: gripper_float=0.7500, gripper_sdk=750, last_cmd=762, deadband=20, will_send=False, sent/filtered=79/271, t=24555.531
+[realman_driver_node-1] [INFO] [1770891044.752530764] [realman_driver_node]: [DIAG-DRIVER-RECV] #351: gripper_float=0.7382, gripper_sdk=738, last_cmd=762, deadband=20, will_send=True, sent/filtered=80/271, t=24555.564
+[realman_driver_node-1] [INFO] [1770891044.753374619] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #80: pos=738, result=0, queue_wait=99.1ms, send_latency=0.1ms, t=24555.565
+[realman_driver_node-1] [INFO] [1770891044.819426869] [realman_driver_node]: [DIAG-DRIVER-RECV] #353: gripper_float=0.7186, gripper_sdk=718, last_cmd=738, deadband=20, will_send=True, sent/filtered=81/272, t=24555.631
+[realman_driver_node-1] [INFO] [1770891044.820457005] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #81: pos=718, result=0, queue_wait=66.3ms, send_latency=0.1ms, t=24555.632
+[realman_driver_node-1] [INFO] [1770891044.920965662] [realman_driver_node]: [DIAG-DRIVER-RECV] #356: gripper_float=0.6948, gripper_sdk=694, last_cmd=718, deadband=20, will_send=True, sent/filtered=82/274, t=24555.732
+[realman_driver_node-1] [INFO] [1770891044.921867827] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #82: pos=694, result=0, queue_wait=0.7ms, send_latency=0.1ms, t=24555.734
+[realman_driver_node-1] [INFO] [1770891045.021285785] [realman_driver_node]: [DIAG-DRIVER-RECV] #359: gripper_float=0.6681, gripper_sdk=668, last_cmd=694, deadband=20, will_send=True, sent/filtered=83/276, t=24555.833
+[realman_driver_node-1] [INFO] [1770891045.022134941] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #83: pos=668, result=0, queue_wait=99.6ms, send_latency=0.2ms, t=24555.834
+[realman_driver_node-1] [INFO] [1770891045.087880855] [realman_driver_node]: [DIAG-DRIVER-RECV] #361: gripper_float=0.6488, gripper_sdk=648, last_cmd=668, deadband=20, will_send=True, sent/filtered=84/277, t=24555.899
+[realman_driver_node-1] [INFO] [1770891045.088684335] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #84: pos=648, result=0, queue_wait=66.0ms, send_latency=0.1ms, t=24555.900
+[dagger_node-6] [INFO] [1770891045.115250798] [dagger_node]: [DAgger] mode=POLICY/standby | cmds=361 | buf=21 | infers=14 | t_inf_avg=0.025s | rec=REC | episodes=0 | frames=199
+[realman_driver_node-1] [INFO] [1770891045.188151014] [realman_driver_node]: [DIAG-DRIVER-RECV] #364: gripper_float=0.6158, gripper_sdk=615, last_cmd=648, deadband=20, will_send=True, sent/filtered=85/279, t=24556.000
+[realman_driver_node-1] [INFO] [1770891045.189171502] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #85: pos=615, result=0, queue_wait=99.8ms, send_latency=0.2ms, t=24556.001
+[realman_driver_node-1] [INFO] [1770891045.255099769] [realman_driver_node]: [DIAG-DRIVER-RECV] #366: gripper_float=0.5869, gripper_sdk=586, last_cmd=615, deadband=20, will_send=True, sent/filtered=86/280, t=24556.067
+[realman_driver_node-1] [INFO] [1770891045.256359656] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #86: pos=586, result=0, queue_wait=66.5ms, send_latency=0.1ms, t=24556.068
+[realman_driver_node-1] [INFO] [1770891045.322439688] [realman_driver_node]: [DIAG-DRIVER-RECV] #368: gripper_float=0.5580, gripper_sdk=557, last_cmd=586, deadband=20, will_send=True, sent/filtered=87/281, t=24556.134
+[realman_driver_node-1] [INFO] [1770891045.323482217] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #87: pos=557, result=0, queue_wait=66.4ms, send_latency=0.1ms, t=24556.135
+[realman_driver_node-1] [INFO] [1770891045.389659321] [realman_driver_node]: [DIAG-DRIVER-RECV] #370: gripper_float=0.5331, gripper_sdk=533, last_cmd=557, deadband=20, will_send=True, sent/filtered=88/282, t=24556.201
+[realman_driver_node-1] [INFO] [1770891045.390637890] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #88: pos=533, result=0, queue_wait=66.5ms, send_latency=0.1ms, t=24556.202
+[realman_driver_node-1] [INFO] [1770891045.423163239] [realman_driver_node]: [DIAG-DRIVER-RECV] #371: gripper_float=0.5111, gripper_sdk=511, last_cmd=533, deadband=20, will_send=True, sent/filtered=89/282, t=24556.234
+[realman_driver_node-1] [INFO] [1770891045.424250612] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #89: pos=511, result=0, queue_wait=32.9ms, send_latency=0.2ms, t=24556.236
+[realman_driver_node-1] [INFO] [1770891045.490104950] [realman_driver_node]: [DIAG-DRIVER-RECV] #373: gripper_float=0.4802, gripper_sdk=480, last_cmd=511, deadband=20, will_send=True, sent/filtered=90/283, t=24556.302
+[realman_driver_node-1] [INFO] [1770891045.491240554] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #90: pos=480, result=0, queue_wait=66.2ms, send_latency=0.1ms, t=24556.303
+[realman_driver_node-1] [INFO] [1770891045.523341887] [realman_driver_node]: [DIAG-DRIVER-RECV] #374: gripper_float=0.4573, gripper_sdk=457, last_cmd=480, deadband=20, will_send=True, sent/filtered=91/283, t=24556.335
+[realman_driver_node-1] [INFO] [1770891045.524284157] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #91: pos=457, result=0, queue_wait=32.3ms, send_latency=0.2ms, t=24556.336
+[dagger_node-6] [INFO] [1770891045.556365492] [dagger_node]: [PolicyExecLoop] Stopped
+[dagger_node-6] [INFO] [1770891045.562494527] [dagger_node]: [stop_session] 禁用 driver follow...
+[realman_driver_node-1] [INFO] [1770891045.563282217] [realman_driver_node]: ⏸️ 跟随已停止，操作者可以休息
+[realman_driver_node-1] [INFO] [1770891046.545246879] [realman_driver_node]: [DIAG-DRIVER-STATE] #2800: gripper_act_raw=449, gripper_open=0.4570, gripper_open_udp=0.4490, last_gripper_cmd=457
+[dagger_node-6] [WARN] [1770891046.564566186] [dagger_node]: /driver/disable_follow call timed out
+[dagger_node-6] [INFO] [1770891046.564973021] [dagger_node]: [stop_session] 会话已停止（POLICY → IDLE），录制已暂停（208 帧，等待确认保存/丢弃）
+[realman_driver_node-1] [INFO] [1770891046.805709631] [realman_driver_node]: [UDP] 正常 | 已接收: 5537 条 | 错误: 0 次 | 模式: 低跟随
+[dagger_node-6] [INFO] [1770891047.441735327] [dagger_node]: Recording episode discarded (208 frames)
+[realman_driver_node-1] [INFO] [1770891048.545315131] [realman_driver_node]: [DIAG-DRIVER-STATE] #3000: gripper_act_raw=449, gripper_open=0.4570, gripper_open_udp=0.4490, last_gripper_cmd=457
+[realman_driver_node-1] [INFO] [1770891050.545288226] [realman_driver_node]: [DIAG-DRIVER-STATE] #3200: gripper_act_raw=449, gripper_open=0.4570, gripper_open_udp=0.4490, last_gripper_cmd=457
+[realman_driver_node-1] [INFO] [1770891051.613982138] [realman_driver_node]: 🏠 开始移动到 home 位姿: [-0.263, -0.505, -0.157, 43.953, 1.225, 121.751, -0.187]
+[realman_driver_node-1] [INFO] [1770891053.550067731] [realman_driver_node]: ✅ 机械臂已到达 home 位置，夹爪已张开
+[vr_input_node-2] [INFO] [1770891053.819391311] [vr_input_node]: [VR 输入] USB/ADB | 正常 | 已接收: 2851 条 | 错误: 0 次
+[realman_driver_node-1] [INFO] [1770891054.475396967] [realman_driver_node]: [DIAG-DRIVER-STATE] #3400: gripper_act_raw=1002, gripper_open=0.4570, gripper_open_udp=1.0000, last_gripper_cmd=457
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[policy_server-5] 2026-02-12 18:10:55,000 - main - INFO - 收到中断信号，正在停止...
+[policy_server-5] 2026-02-12 18:10:55,000 - UnifiedPolicyServer - INFO - 服务器已停止
+[policy_server-5] 2026-02-12 18:10:55,000 - main - INFO - 服务器已终止
+[dagger_node-6] [INFO] [1770891055.000637148] [dagger_node]: Shutting down DAgger node...
+[dagger_node-6] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [INFO] [1770891055.001687913] [dagger_node]: DAggerRecorder closed
+[dagger_node-6] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[realman_driver_node-1] [INFO] [1770891055.000679087] [realman_driver_node]: 🛑 正在关闭驱动节点...
+[realman_driver_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[vr_input_node-2] [INFO] [1770891055.001159450] [vr_input_node]: 正在关闭 VR 输入节点...
+[vr_input_node-2] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [InferenceBridge] #10: t_inf=0.022s, K_inf=15, chunk=50, valid=35, buf=35
+[dagger_node-6] [DIAG-ON-STATE] #2119: gripper=0.6860, prev=0.4280, t=24551.587
+[dagger_node-6] [DIAG-ON-STATE] #2126: gripper=0.6590, prev=0.6860, t=24551.657
+[dagger_node-6] [DIAG-ON-STATE] #2133: gripper=0.6280, prev=0.6590, t=24551.727
+[dagger_node-6] [DIAG-ON-STATE] #2139: gripper=0.6010, prev=0.6280, t=24551.787
+[dagger_node-6] [DIAG-ON-STATE] #2149: gripper=0.5750, prev=0.6010, t=24551.887
+[dagger_node-6] [DIAG-ON-STATE] #2156: gripper=0.5550, prev=0.5750, t=24551.957
+[dagger_node-6] [DIAG-ON-STATE] #2169: gripper=0.5320, prev=0.5550, t=24552.088
+[dagger_node-6] [DIAG-PUBLISH] #250: gripper_float=0.5066, gripper_sdk_equiv=506, timestamp=24552.186
+[dagger_node-6] [DIAG-ON-STATE] #2179: gripper=0.5060, prev=0.5320, t=24552.188
+[dagger_node-6] [DIAG-ACTION-POP] exec#250: action.gripper=0.4973, obs_gripper=0.5060, delta=-0.0087, buf_size=15
+[dagger_node-6] [DIAG-ON-STATE] #2186: gripper=0.4850, prev=0.5060, t=24552.257
+[dagger_node-6] [DIAG-ON-STATE] #2196: gripper=0.4590, prev=0.4850, t=24552.357
+[dagger_node-6] [DIAG-ON-STATE] #2200: gripper=0.4590, prev=0.4590, t=24552.397
+[dagger_node-6] [DIAG-ON-STATE] #2206: gripper=0.4320, prev=0.4590, t=24552.457
+[dagger_node-6] [DIAG-CYCLE] #9: infer=21.6ms, wait=954.2ms, total_cycle=975.9ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #12: gripper_raw=0.4320, gripper_clipped=0.4320, obs_age=1.9ms, must_go=False
+[dagger_node-6] [TIMING-INFER-BRIDGE] #10: obs_build=0.40ms, pickle=1.50ms, grpc=19.82ms, parse=0.17ms, buf_update=0.00ms, t_inf_total=21.9ms, K_inf=15, valid=35, buf=35, ema=23.7ms, obs_age=1.9ms, obs_cnt=270, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT-GRIP] infer#10: obs_grip=0.4320, K_inf=15, valid=35, grip_valid: min=0.4159, max=0.9014, first3=['0.901', '0.901', '0.900']
+[dagger_node-6] [DIAG-ON-STATE] #2216: gripper=0.9000, prev=0.4320, t=24552.557
+[dagger_node-6] [DIAG-STATE-READ] #300: gripper_from_ros2=0.9000, joints[0]=-0.99deg
+[dagger_node-6] [DIAG-ON-STATE] #2240: gripper=0.8790, prev=0.9000, t=24552.797
+[dagger_node-6] [DIAG-ON-STATE] #2250: gripper=0.8590, prev=0.8790, t=24552.897
+[dagger_node-6] [DIAG-ON-STATE] #2256: gripper=0.8320, prev=0.8590, t=24552.957
+[dagger_node-6] [DIAG-ON-STATE] #2263: gripper=0.7990, prev=0.8320, t=24553.027
+[dagger_node-6] [DIAG-ON-STATE] #2270: gripper=0.7590, prev=0.7990, t=24553.098
+[dagger_node-6] [DIAG-ON-STATE] #2276: gripper=0.7150, prev=0.7590, t=24553.157
+[dagger_node-6] [DIAG-ON-STATE] #2280: gripper=0.6940, prev=0.7150, t=24553.197
+[dagger_node-6] [DIAG-ON-STATE] #2283: gripper=0.6730, prev=0.6940, t=24553.227
+[dagger_node-6] [DIAG-ON-STATE] #2286: gripper=0.6470, prev=0.6730, t=24553.257
+[dagger_node-6] [DIAG-ON-STATE] #2293: gripper=0.5990, prev=0.6470, t=24553.327
+[dagger_node-6] [DIAG-ON-STATE] #2296: gripper=0.5740, prev=0.5990, t=24553.361
+[dagger_node-6] [DIAG-ON-STATE] #2300: gripper=0.5510, prev=0.5740, t=24553.397
+[dagger_node-6] [DIAG-ON-STATE] #2303: gripper=0.5220, prev=0.5510, t=24553.427
+[dagger_node-6] [DIAG-ON-STATE] #2306: gripper=0.5010, prev=0.5220, t=24553.458
+[dagger_node-6] [DIAG-OBS-BUILD] #13: gripper_raw=0.5010, gripper_clipped=0.5010, obs_age=31.9ms, must_go=False
+[dagger_node-6] [DIAG-ON-STATE] #2310: gripper=0.4740, prev=0.5010, t=24553.498
+[dagger_node-6] [TIMING-OBS-FEED] #300: state=0.01ms, img_copy=0.29ms, bridge_update=0.25ms, total=0.55ms, gripper=0.4740
+[dagger_node-6] [DIAG-ON-STATE] #2313: gripper=0.8990, prev=0.4740, t=24553.527
+[dagger_node-6] [DIAG-ON-STATE] #2337: gripper=0.8750, prev=0.8990, t=24553.769
+[dagger_node-6] [DIAG-PUBLISH] #300: gripper_float=0.8650, gripper_sdk_equiv=864, timestamp=24553.857
+[dagger_node-6] [TIMING-EXEC] #300: mode_lock=0.00ms, pop=0.00ms, execute=0.20ms, total_work=0.23ms, buf=24, actual_hz=28.8
+[dagger_node-6] [DIAG-ACTION-POP] exec#300: action.gripper=0.8517, obs_gripper=0.8750, delta=-0.0233, buf_size=23
+[dagger_node-6] [DIAG-ON-STATE] #2350: gripper=0.8510, prev=0.8750, t=24553.897
+[dagger_node-6] [DIAG-ON-STATE] #2360: gripper=0.8160, prev=0.8510, t=24553.997
+[dagger_node-6] [DIAG-ON-STATE] #2367: gripper=0.7800, prev=0.8160, t=24554.068
+[dagger_node-6] [DIAG-ON-STATE] #2373: gripper=0.7370, prev=0.7800, t=24554.127
+[dagger_node-6] [DIAG-ON-STATE] #2377: gripper=0.7170, prev=0.7370, t=24554.169
+[dagger_node-6] [DIAG-ON-STATE] #2380: gripper=0.6880, prev=0.7170, t=24554.197
+[dagger_node-6] [DIAG-ON-STATE] #2383: gripper=0.6650, prev=0.6880, t=24554.228
+[dagger_node-6] [DIAG-ON-STATE] #2390: gripper=0.6140, prev=0.6650, t=24554.297
+[dagger_node-6] [DIAG-ON-STATE] #2393: gripper=0.5870, prev=0.6140, t=24554.328
+[dagger_node-6] [DIAG-ON-STATE] #2397: gripper=0.5620, prev=0.5870, t=24554.368
+[dagger_node-6] [DIAG-ON-STATE] #2400: gripper=0.5290, prev=0.5620, t=24554.397
+[dagger_node-6] [DIAG-ON-STATE] #2403: gripper=0.5080, prev=0.5290, t=24554.428
+[dagger_node-6] [DIAG-OBS-BUILD] #14: gripper_raw=0.5080, gripper_clipped=0.5080, obs_age=6.0ms, must_go=False
+[dagger_node-6] [DIAG-ON-STATE] #2407: gripper=0.4820, prev=0.5080, t=24554.470
+[dagger_node-6] [DIAG-ON-STATE] #2410: gripper=0.8330, prev=0.4820, t=24554.497
+[dagger_node-6] [DIAG-ON-STATE] #2420: gripper=0.7990, prev=0.8330, t=24554.597
+[dagger_node-6] [DIAG-ON-STATE] #2427: gripper=0.7730, prev=0.7990, t=24554.670
+[dagger_node-6] [DIAG-ON-STATE] #2434: gripper=0.7450, prev=0.7730, t=24554.737
+[dagger_node-6] [DIAG-ON-STATE] #2440: gripper=0.7250, prev=0.7450, t=24554.797
+[dagger_node-6] [DIAG-ON-STATE] #2447: gripper=0.6930, prev=0.7250, t=24554.868
+[dagger_node-6] [DIAG-ON-STATE] #2454: gripper=0.6690, prev=0.6930, t=24554.937
+[dagger_node-6] [DIAG-ON-STATE] #2460: gripper=0.6400, prev=0.6690, t=24554.998
+[dagger_node-6] [DIAG-ON-STATE] #2467: gripper=0.6090, prev=0.6400, t=24555.071
+[dagger_node-6] [DIAG-ON-STATE] #2470: gripper=0.5890, prev=0.6090, t=24555.098
+[dagger_node-6] [DIAG-ON-STATE] #2477: gripper=0.5550, prev=0.5890, t=24555.168
+[dagger_node-6] [DIAG-ON-STATE] #2484: gripper=0.5300, prev=0.5550, t=24555.237
+[dagger_node-6] [DIAG-ON-STATE] #2487: gripper=0.5050, prev=0.5300, t=24555.267
+[dagger_node-6] [DIAG-ON-STATE] #2494: gripper=0.4710, prev=0.5050, t=24555.337
+[dagger_node-6] [DIAG-ON-STATE] #2497: gripper=0.4440, prev=0.4710, t=24555.367
+[dagger_node-6] [DIAG-OBS-BUILD] #15: gripper_raw=0.4440, gripper_clipped=0.4440, obs_age=9.3ms, must_go=False
+[dagger_node-6] [DIAG-ON-STATE] #2504: gripper=0.4240, prev=0.4440, t=24555.439
+[dagger_node-6] [DIAG-ON-STATE] #2507: gripper=0.7620, prev=0.4240, t=24555.470
+[dagger_node-6] [DIAG-PUBLISH] #350: gripper_float=0.7500, gripper_sdk_equiv=750, timestamp=24555.530
+[dagger_node-6] [DIAG-ACTION-POP] exec#350: action.gripper=0.7382, obs_gripper=0.7620, delta=-0.0238, buf_size=31
+[dagger_node-6] [DIAG-ON-STATE] #2517: gripper=0.7380, prev=0.7620, t=24555.571
+[dagger_node-6] [DIAG-ON-STATE] #2524: gripper=0.7180, prev=0.7380, t=24555.637
+[dagger_node-6] [DIAG-ON-STATE] #2534: gripper=0.6940, prev=0.7180, t=24555.737
+[dagger_node-6] [DIAG-ON-STATE] #2544: gripper=0.6680, prev=0.6940, t=24555.837
+[dagger_node-6] [DIAG-STATE-READ] #400: gripper_from_ros2=0.6680, joints[0]=-3.09deg
+[dagger_node-6] [DIAG-ON-STATE] #2551: gripper=0.6480, prev=0.6680, t=24555.907
+[dagger_node-6] [DIAG-ON-STATE] #2561: gripper=0.6150, prev=0.6480, t=24556.007
+[dagger_node-6] [DIAG-ON-STATE] #2567: gripper=0.5860, prev=0.6150, t=24556.068
+[dagger_node-6] [DIAG-ON-STATE] #2574: gripper=0.5570, prev=0.5860, t=24556.137
+[dagger_node-6] [DIAG-ON-STATE] #2581: gripper=0.5330, prev=0.5570, t=24556.207
+[dagger_node-6] [DIAG-ON-STATE] #2584: gripper=0.5110, prev=0.5330, t=24556.238
+[dagger_node-6] [DIAG-ON-STATE] #2591: gripper=0.4800, prev=0.5110, t=24556.307
+[dagger_node-6] [DIAG-ON-STATE] #2594: gripper=0.4570, prev=0.4800, t=24556.337
+[dagger_node-6] [InferenceBridge] Inference thread stopped
+[dagger_node-6] [DIAG-ON-STATE] #2600: gripper=0.4570, prev=0.4570, t=24557.393
+[dagger_node-6] [DIAG-ON-STATE] #2800: gripper=0.4570, prev=0.4570, t=24559.317
+[dagger_node-6] [DIAG-ON-STATE] #3000: gripper=0.4570, prev=0.4570, t=24561.317
+[dagger_node-6] [DIAG-ON-STATE] #3200: gripper=0.4570, prev=0.4570, t=24565.247
+[dagger_node-6] [InferenceBridge] Disconnected
+[dagger_node-6] Traceback (most recent call last):
+[dagger_node-6]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/dagger_node.py", line 2181, in <module>
+[camera_node-4] Traceback (most recent call last):
+[camera_node-4]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/install/realman_teleop/lib/realman_teleop/camera_node", line 33, in <module>
+[camera_node-4]     sys.exit(load_entry_point('realman-teleop==0.3.0', 'console_scripts', 'camera_node')())
+[camera_node-4]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[camera_node-4]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop/realman_teleop/camera_node.py", line 101, in main
+[camera_node-4]     rclpy.shutdown()
+[camera_node-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[camera_node-4]     _shutdown(context=context)
+[camera_node-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[camera_node-4]     context.shutdown()
+[camera_node-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[camera_node-4]     self.__context.shutdown()
+[camera_node-4] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[dagger_node-6]     main()
+[dagger_node-6]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/dagger_node.py", line 2177, in main
+[dagger_node-6]     _cleanup()
+[dagger_node-6]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/dagger_node.py", line 2162, in _cleanup
+[dagger_node-6]     rclpy.shutdown()
+[dagger_node-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[dagger_node-6]     _shutdown(context=context)
+[dagger_node-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[dagger_node-6]     context.shutdown()
+[dagger_node-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[dagger_node-6]     self.__context.shutdown()
+[dagger_node-6] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[dagger_control_panel-7] Traceback (most recent call last):
+[dagger_control_panel-7]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/web_ui/control_panel.py", line 907, in <module>
+[dagger_control_panel-7]     main()
+[dagger_control_panel-7]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/web_ui/control_panel.py", line 903, in main
+[dagger_control_panel-7]     rclpy.shutdown()
+[dagger_control_panel-7]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[dagger_control_panel-7]     _shutdown(context=context)
+[dagger_control_panel-7]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[dagger_control_panel-7]     context.shutdown()
+[dagger_control_panel-7]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[dagger_control_panel-7]     self.__context.shutdown()
+[dagger_control_panel-7] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[realman_driver_node-1] [INFO] [1770891055.039850533] [realman_driver_node]: 🔌 正在关闭 RM+ 生态协议...
+[realman_driver_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[realman_driver_node-1] [INFO] [1770891055.040369258] [realman_driver_node]: ✅ 驱动节点已安全关闭
+[realman_driver_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[camera_node-3] Traceback (most recent call last):
+[camera_node-3]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/install/realman_teleop/lib/realman_teleop/camera_node", line 33, in <module>
+[camera_node-3]     sys.exit(load_entry_point('realman-teleop==0.3.0', 'console_scripts', 'camera_node')())
+[camera_node-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[camera_node-3]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop/realman_teleop/camera_node.py", line 101, in main
+[camera_node-3]     rclpy.shutdown()
+[camera_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[camera_node-3]     _shutdown(context=context)
+[camera_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[camera_node-3]     context.shutdown()
+[camera_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[camera_node-3]     self.__context.shutdown()
+[camera_node-3] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[realman_driver_node-1] Traceback (most recent call last):
+[realman_driver_node-1]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/install/realman_teleop/lib/realman_teleop/realman_driver_node", line 33, in <module>
+[realman_driver_node-1]     sys.exit(load_entry_point('realman-teleop==0.3.0', 'console_scripts', 'realman_driver_node')())
+[realman_driver_node-1]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[realman_driver_node-1]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop/realman_teleop/realman_driver_node.py", line 680, in main
+[realman_driver_node-1]     _cleanup()
+[realman_driver_node-1]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop/realman_teleop/realman_driver_node.py", line 664, in _cleanup
+[realman_driver_node-1]     rclpy.shutdown()
+[realman_driver_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[realman_driver_node-1]     _shutdown(context=context)
+[realman_driver_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[realman_driver_node-1]     context.shutdown()
+[realman_driver_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[realman_driver_node-1]     self.__context.shutdown()
+[realman_driver_node-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[vr_input_node-2] Traceback (most recent call last):
+[vr_input_node-2]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/install/realman_teleop/lib/realman_teleop/vr_input_node", line 33, in <module>
+[vr_input_node-2]     sys.exit(load_entry_point('realman-teleop==0.3.0', 'console_scripts', 'vr_input_node')())
+[vr_input_node-2]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[vr_input_node-2]   File "/home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/build/realman_teleop/realman_teleop/vr_input_node.py", line 285, in main
+[vr_input_node-2]     rclpy.shutdown()
+[vr_input_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[vr_input_node-2]     _shutdown(context=context)
+[vr_input_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[vr_input_node-2]     context.shutdown()
+[vr_input_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[vr_input_node-2]     self.__context.shutdown()
+[vr_input_node-2] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333

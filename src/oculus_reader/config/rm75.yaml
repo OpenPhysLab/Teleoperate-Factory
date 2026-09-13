@@ -1,0 +1,91 @@
+# RM75 defaults for Quest teleoperation.  Joint limit fields below are in
+# degrees (the RM controller command unit); target_joint_state is radians.
+robot_model: rm75_6f
+urdf_path: /home/lyj/questVR_ws/src/oculus_reader/urdf/RM75-6F.urdf
+robot_backend: rm_ros       # rm_ros | rm_sdk | joint_state | dry_run
+arm_dof: 7
+joint_names: [joint1, joint2, joint3, joint4, joint5, joint6, joint7]
+joint_lower_deg: [-178.0, -130.0, -178.0, -135.0, -178.0, -128.0, -360.0]
+joint_upper_deg: [178.0, 130.0, 178.0, 135.0, 178.0, 128.0, 360.0]
+
+# A different, verified RM75 home pose may be supplied here in radians.
+target_joint_state: [-0.003246312, -0.668408744, 0.014259340, 1.300322653, -0.009005899, 1.732815241, 0.000977384]
+right_target_joint_state: [-0.003246312, -0.668408744, 0.014259340, 1.300322653, -0.009005899, 1.732815241, 0.000977384]
+left_target_joint_state: [-0.001186824, -0.575277975, 0.026965337, 1.305576094, 0.001134464, 1.628025673, 0.558836973]
+left_teleop_zero_pose: [0.102347096, 0.006307355, 0.509651135, 2.669093261, 0.650355998, 2.448807128]
+right_teleop_zero_pose: [0.066340541, 0.001612656, 0.508172031, -3.122702010, 0.776818026, -3.128368721]
+initial_pose_file: rm75_initial_poses.yaml
+init_pose_duration: 1.5
+init_pose_rate: 50.0
+state_wait_timeout: 1.0
+max_joint_step_deg: 2.5
+
+# Official rm_robot ROS interface.
+joint_command_topic: /rm_driver/JointPos
+state_topic: /joint_states
+gripper_command_topic: /rm_driver/Gripper_Set
+gripper_enabled: true
+gripper_max_width: 0.07
+gripper_inverted: false
+initial_gripper_width: 0.07
+
+# Official API2 Python SDK connection (used only when robot_backend=rm_sdk).
+rm_ip: 192.168.1.18
+left_rm_ip: 192.168.1.18
+right_rm_ip: 192.168.1.19
+rm_port: 8080
+rm_log_level: 3
+# Quest pose callbacks are normally below 100 Hz; low-follow avoids the
+# API2 high-follow <=10 ms period requirement. Enable only with a measured
+# high-rate publisher and a verified safety envelope.
+rm_high_follow: false
+rm_trajectory_mode: 1
+rm_radio: 50
+rm_use_internal_ik: true
+
+# Quest->RM75 mapping. Keep identity until measured from calibration logs.
+# Set track_rotation: false during position-only calibration.
+teleop_mapping:
+  # OpenXR Grip: robot +X=hand +Y, robot +Y=hand -X, robot +Z=hand +Z
+  position_permutation: [0, 1, 2]
+  position_sign: [1, 1, 1]
+  # Empirical direction check: X is correct; local hand Y/Z need inversion.
+  position_rotation: [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]
+  position_scale: [1.0, 1.0, 1.0]
+  track_rotation: true
+  lock_vertical_down: true
+right_teleop_mapping:
+  position_permutation: [0, 1, 2]
+  position_sign: [1, 1, 1]
+  position_rotation: [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]
+  position_scale: [1.0, 1.0, 1.0]
+  track_rotation: true
+  lock_vertical_down: true
+left_teleop_mapping:
+  position_permutation: [0, 1, 2]
+  position_sign: [1, 1, 1]
+  position_rotation: [[0.5, -0.8660254, 0.0], [-0.8660254, -0.5, 0.0], [0.0, 0.0, -1.0]]
+  position_scale: [1.0, 1.0, 1.0]
+  track_rotation: true
+  lock_vertical_down: true
+
+# IK endpoint.  The bundled URDF is the standard RM75-B model (d7=144 mm).
+# For RM75-6FB/-6F/-V, set urdf_path to the matching official rm_description
+# URDF and adjust the end-effector/tool offset if an accessory is installed.
+ik_ee_joint: joint_7
+ik_ee_xyz: [0.0, 0.0, 0.008]
+ik_ee_rpy: [0.0, 0.0, 0.0]
+right_ik_ee_xyz: [0.0, 0.0, 0.008]
+right_ik_ee_rpy: [0.0, 0.0, 0.0]
+left_ik_ee_xyz: [0.0, 0.0, 0.008]
+left_ik_ee_rpy: [0.0, 0.0, 0.5235987756]
+ik_lock_joints: []
+ik_visualize: false
+ik_collision_check: false
+ik_max_iter: 50
+ik_tol: 0.0001
+
+# Robot pose corresponding to the calibrated Quest handle origin (m/rad).
+# All-zero RM75 joints place the standard-B flange at z=0.8505 m in this
+# lightweight model. Calibrate this pose against the actual Quest mounting.
+teleop_zero_pose: [0.0, 0.0, 0.8505, 0.0, 0.0, 0.0]

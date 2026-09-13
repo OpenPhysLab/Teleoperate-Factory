@@ -1,0 +1,314 @@
+[dagger_node-6] [DIAG-STATE-READ] #8: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #9: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #10: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #11: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #12: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #13: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [InferenceBridge] Server config received:
+[dagger_node-6]   task: pick up the yellow banana and put it in the white plate
+[dagger_node-6]   action_space: joints
+[dagger_node-6] [Warmup] chunk_size probe: t_inf=0.385s, chunk_size=50
+[dagger_node-6] 
+[dagger_node-6] ============================================================
+[dagger_node-6] [InferenceBridge] Parameter derivation
+[dagger_node-6] ============================================================
+[dagger_node-6]   chunk_size (L):        50
+[dagger_node-6]   effective (L_eff):     50
+[dagger_node-6]   f_exec:                30.0 Hz
+[dagger_node-6]   t_inf:                 0.200s
+[dagger_node-6]   K_inf:                 6
+[dagger_node-6]   L_valid:               44
+[dagger_node-6]   T_inter_max:           1.467s
+[dagger_node-6]   T_inter:               1.173s
+[dagger_node-6]   threshold:             6
+[dagger_node-6]   feasible:              PASS
+[dagger_node-6] ============================================================
+[dagger_node-6] 
+[dagger_node-6] [DIAG-OBS-BUILD] #2: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=21.3ms, must_go=True
+[dagger_node-6] [DIAG-OBS] infer#0 joints(deg): ['-0.26', '-0.50', '-0.16', '43.95', '1.23', '121.75', '-0.19'], gripper: 1.000, obs_age=21.3ms, obs_count=13, first_obs, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [DIAG-STATE-READ] #14: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [TIMING-EXEC] #0: HOLD (no action), buf_size=0
+[dagger_node-6] [TIMING-INFER-BRIDGE] #0: obs_build=1.52ms, pickle=1.42ms, grpc=34.45ms, parse=0.23ms, buf_update=0.01ms, t_inf_total=37.6ms, K_inf=16, valid=34, buf=34, ema=37.6ms, obs_age=21.3ms, obs_cnt=13, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#0: t_inf=0.038s, K_inf=16, chunk=50, valid=34
+[dagger_node-6]   action[0](deg):     ['-0.23', '-0.46', '-0.08', '44.42', '1.29', '121.36', '-0.16']
+[dagger_node-6]   action[-1](deg):    ['3.30', '2.41', '3.53', '66.28', '-1.11', '96.55', '4.38']
+[dagger_node-6]   valid[0](deg):      ['1.47', '1.22', '1.48', '50.23', '0.98', '114.29', '3.08']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9981, max=1.0014, first5=['1.000', '0.999', '0.998', '0.998', '0.998']
+[dagger_node-6]   gripper_valid: min=0.9981, max=1.0014, first5=['0.999', '0.999', '0.999', '0.999', '0.999']
+[dagger_node-6] [DIAG-STATE-READ] #15: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #16: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-ACTION-POP] exec#0: action.gripper=0.9991, obs_gripper=1.0000, delta=-0.0009, buf_size=33
+[dagger_node-6] [DIAG-STATE-READ] #17: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-PUBLISH] #1: gripper_float=0.9991, gripper_sdk_equiv=999, timestamp=23228.916
+[dagger_node-6] [TIMING-EXEC] #1: mode_lock=0.01ms, pop=0.01ms, execute=0.17ms, total_work=4.87ms, buf=33, actual_hz=24.4
+[dagger_node-6] [DIAG-STATE-READ] #18: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-ACTION-POP] exec#1: action.gripper=0.9990, obs_gripper=1.0000, delta=-0.0010, buf_size=32
+[dagger_node-6] [DIAG-STATE-READ] #19: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-STATE-READ] #20: gripper_from_ros2=1.0000, joints[0]=-0.26deg
+[dagger_node-6] [DIAG-PUBLISH] #2: gripper_float=0.9990, gripper_sdk_equiv=998, timestamp=23228.956
+[dagger_node-6] [TIMING-EXEC] #2: mode_lock=0.00ms, pop=0.01ms, execute=0.16ms, total_work=9.83ms, buf=32, actual_hz=24.5
+[dagger_node-6] [DIAG-ACTION-POP] exec#2: action.gripper=0.9990, obs_gripper=1.0000, delta=-0.0010, buf_size=31
+[dagger_node-6] [DIAG-PUBLISH] #3: gripper_float=0.9990, gripper_sdk_equiv=998, timestamp=23228.982
+[dagger_node-6] [TIMING-EXEC] #3: mode_lock=0.00ms, pop=0.00ms, execute=0.12ms, total_work=2.06ms, buf=31, actual_hz=28.0
+[dagger_node-6] [DIAG-ACTION-POP] exec#3: action.gripper=0.9987, obs_gripper=1.0000, delta=-0.0013, buf_size=30
+[dagger_node-6] [DIAG-PUBLISH] #4: gripper_float=0.9987, gripper_sdk_equiv=998, timestamp=23229.013
+[dagger_node-6] [TIMING-EXEC] #4: mode_lock=0.00ms, pop=0.00ms, execute=0.16ms, total_work=0.22ms, buf=30, actual_hz=28.8
+[dagger_node-6] [DIAG-ACTION-POP] exec#4: action.gripper=0.9985, obs_gripper=1.0000, delta=-0.0015, buf_size=29
+[dagger_node-6] [DIAG-PUBLISH] #5: gripper_float=0.9985, gripper_sdk_equiv=998, timestamp=23229.048
+[dagger_node-6] [TIMING-EXEC] #5: mode_lock=0.00ms, pop=0.00ms, execute=0.15ms, total_work=0.22ms, buf=29, actual_hz=28.9
+[dagger_node-6] [DIAG-ACTION-POP] exec#5: action.gripper=0.9984, obs_gripper=1.0000, delta=-0.0016, buf_size=28
+[dagger_node-6] [DIAG-PUBLISH] #6: gripper_float=0.9984, gripper_sdk_equiv=998, timestamp=23229.082
+[dagger_node-6] [TIMING-EXEC] #6: mode_lock=0.00ms, pop=0.00ms, execute=0.12ms, total_work=0.17ms, buf=28, actual_hz=29.0
+[dagger_node-6] [DIAG-ACTION-POP] exec#6: action.gripper=0.9984, obs_gripper=1.0000, delta=-0.0016, buf_size=27
+[dagger_node-6] [DIAG-PUBLISH] #7: gripper_float=0.9984, gripper_sdk_equiv=998, timestamp=23229.120
+[dagger_node-6] [TIMING-EXEC] #7: mode_lock=0.00ms, pop=0.00ms, execute=0.15ms, total_work=0.21ms, buf=27, actual_hz=28.6
+[dagger_node-6] [DIAG-ACTION-POP] exec#7: action.gripper=0.9982, obs_gripper=1.0000, delta=-0.0018, buf_size=26
+[dagger_node-6] [DIAG-PUBLISH] #8: gripper_float=0.9982, gripper_sdk_equiv=998, timestamp=23229.153
+[dagger_node-6] [TIMING-EXEC] #8: mode_lock=0.00ms, pop=0.00ms, execute=0.16ms, total_work=0.20ms, buf=26, actual_hz=28.7
+[dagger_node-6] [DIAG-ACTION-POP] exec#8: action.gripper=0.9981, obs_gripper=1.0000, delta=-0.0019, buf_size=25
+[dagger_node-6] [DIAG-PUBLISH] #9: gripper_float=0.9981, gripper_sdk_equiv=998, timestamp=23229.188
+[dagger_node-6] [TIMING-EXEC] #9: mode_lock=0.00ms, pop=0.00ms, execute=0.12ms, total_work=0.16ms, buf=25, actual_hz=28.7
+[dagger_node-6] [DIAG-ACTION-POP] exec#9: action.gripper=0.9982, obs_gripper=1.0000, delta=-0.0018, buf_size=24
+[dagger_node-6] [DIAG-PUBLISH] #10: gripper_float=0.9982, gripper_sdk_equiv=998, timestamp=23229.221
+[dagger_node-6] [TIMING-EXEC] #10: mode_lock=0.00ms, pop=0.00ms, execute=0.12ms, total_work=0.16ms, buf=24, actual_hz=28.8
+[dagger_node-6] [DIAG-ACTION-POP] exec#10: action.gripper=0.9986, obs_gripper=1.0000, delta=-0.0014, buf_size=23
+[dagger_node-6] [DIAG-PUBLISH] #11: gripper_float=0.9986, gripper_sdk_equiv=998, timestamp=23229.260
+[dagger_node-6] [DIAG-ACTION-POP] exec#11: action.gripper=0.9985, obs_gripper=1.0000, delta=-0.0015, buf_size=22
+[dagger_node-6] [DIAG-PUBLISH] #12: gripper_float=0.9985, gripper_sdk_equiv=998, timestamp=23229.293
+[dagger_node-6] [DIAG-ACTION-POP] exec#12: action.gripper=0.9989, obs_gripper=1.0000, delta=-0.0011, buf_size=21
+[dagger_node-6] [DIAG-PUBLISH] #13: gripper_float=0.9989, gripper_sdk_equiv=998, timestamp=23229.327
+[dagger_node-6] [DIAG-ACTION-POP] exec#13: action.gripper=0.9990, obs_gripper=1.0000, delta=-0.0010, buf_size=20
+[dagger_node-6] [DIAG-PUBLISH] #14: gripper_float=0.9990, gripper_sdk_equiv=998, timestamp=23229.446
+[dagger_node-6] [DIAG-ACTION-POP] exec#14: action.gripper=0.9992, obs_gripper=1.0000, delta=-0.0008, buf_size=19
+[dagger_node-6] [DIAG-PUBLISH] #15: gripper_float=0.9992, gripper_sdk_equiv=999, timestamp=23229.485
+[dagger_node-6] [DIAG-ACTION-POP] exec#15: action.gripper=0.9995, obs_gripper=1.0000, delta=-0.0005, buf_size=18
+[dagger_node-6] [DIAG-PUBLISH] #16: gripper_float=0.9995, gripper_sdk_equiv=999, timestamp=23229.518
+[realman_driver_node-1] [INFO] [1770889718.742021936] [realman_driver_node]: [DIAG-DRIVER-RECV] #17: gripper_float=0.9997, gripper_sdk=999, last_cmd=999, deadband=20, will_send=False, t=23229.553
+[realman_driver_node-1] [INFO] [1770889718.774319582] [realman_driver_node]: [DIAG-DRIVER-RECV] #18: gripper_float=1.0000, gripper_sdk=999, last_cmd=999, deadband=20, will_send=False, t=23229.586
+[realman_driver_node-1] [INFO] [1770889718.807855591] [realman_driver_node]: [DIAG-DRIVER-RECV] #19: gripper_float=1.0001, gripper_sdk=1000, last_cmd=999, deadband=20, will_send=False, t=23229.620
+[realman_driver_node-1] [INFO] [1770889718.841196565] [realman_driver_node]: [DIAG-DRIVER-RECV] #20: gripper_float=1.0002, gripper_sdk=1000, last_cmd=999, deadband=20, will_send=False, t=23229.653
+[policy_server-5] 2026-02-12 17:48:39,124 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:39,132 - UnifiedPolicyServer - INFO - 推理观测 #1
+[policy_server-5] [DIAG-SERVER] #2 raw model output (unnormalized):
+[policy_server-5]   shape: (50, 8)
+[policy_server-5]   action[0] (rad): [ 1.75303034e-03 -1.66483223e-03  2.22283509e-03  1.54019315e-02
+[policy_server-5]  -1.28051033e-04 -1.13069937e-02  1.79536408e-03  9.89915192e-01]
+[policy_server-5]   action[0] (deg): [ 0.10044123 -0.09538785  0.12735906  0.8824656  -0.00733678 -0.647843
+[policy_server-5]   0.10286678] gripper=0.9899
+[policy_server-5]   action[-1](deg): [  2.4661434   4.355833    2.4710248  22.976473   -1.9002614 -26.800709
+[policy_server-5]    2.927821 ] gripper=1.0009
+[policy_server-5]   obs.joints(deg): [ 2.46999979e+00  1.07099998e+00  2.47299981e+00  5.54739990e+01
+[policy_server-5]  -1.07999995e-01  1.08591995e+02  3.94399977e+00]
+[policy_server-5]   obs.gripper: 1.0000
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] [DIAG-SERVER] delta conversion:
+[policy_server-5]   current_state(deg): [ 2.47000003e+00  1.07100002e+00  2.47299998e+00  5.54740007e+01
+[policy_server-5]  -1.07999998e-01  1.08592003e+02  3.94400010e+00] gripper=1.0000
+[policy_server-5]   delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5]   delta_mode: relative
+[policy_server-5] [DIAG-SERVER] after delta-to-absolute:
+[policy_server-5]   action[0] (deg): [  2.5704412    0.9756121    2.600359    56.356464    -0.11533678
+[policy_server-5]  107.94415      4.046867  ] gripper=0.9899
+[policy_server-5]   action[-1](deg): [ 4.9361434  5.426833   4.9440246 78.45047   -2.0082614 81.79129
+[policy_server-5]   6.8718204] gripper=1.0009
+[policy_server-5] 2026-02-12 17:48:39,147 - UnifiedPolicyServer - INFO - 动作块 #1 生成完成 | 推理耗时: 14.26ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889719.249178381] [realman_driver_node]: [DIAG-DRIVER-STATE] #2600: gripper_act_raw=1001, gripper_open=1.0000, last_gripper_cmd=999
+[realman_driver_node-1] [INFO] [1770889719.974229864] [realman_driver_node]: [DIAG-DRIVER-RECV] #50: gripper_float=0.9995, gripper_sdk=999, last_cmd=999, deadband=20, will_send=False, t=23230.786
+[dagger_node-6] WARNING:dagger.core.data_recorder:数据集目录已存在，清理旧数据: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/dagger/data/local/dagger_realman_0212-test2
+[dagger_node-6] [INFO] [1770889720.247739035] [dagger_node]: DAggerRecorder initialized (from sync): repo=local/dagger_realman_0212-test2, cameras=['cam0_rgb', 'cam1_rgb'], policy_action_dim=8
+[policy_server-5] 2026-02-12 17:48:40,296 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:40,305 - UnifiedPolicyServer - INFO - 推理观测 #2
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:40,321 - UnifiedPolicyServer - INFO - 动作块 #2 生成完成 | 推理耗时: 15.98ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889720.339186420] [realman_driver_node]: [UDP] 正常 | 已接收: 5596 条 | 错误: 0 次 | 模式: 低跟随
+[realman_driver_node-1] [INFO] [1770889721.249135305] [realman_driver_node]: [DIAG-DRIVER-STATE] #2800: gripper_act_raw=1001, gripper_open=1.0000, last_gripper_cmd=999
+[policy_server-5] 2026-02-12 17:48:41,256 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:41,263 - UnifiedPolicyServer - INFO - 推理观测 #3
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:41,277 - UnifiedPolicyServer - INFO - 动作块 #3 生成完成 | 推理耗时: 13.57ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889721.782047560] [realman_driver_node]: [DIAG-DRIVER-RECV] #100: gripper_float=0.9991, gripper_sdk=999, last_cmd=999, deadband=20, will_send=False, t=23232.594
+[policy_server-5] 2026-02-12 17:48:42,222 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:42,230 - UnifiedPolicyServer - INFO - 推理观测 #4
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:42,244 - UnifiedPolicyServer - INFO - 动作块 #4 生成完成 | 推理耗时: 14.10ms | 动作数: 50
+[policy_server-5] 2026-02-12 17:48:43,199 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:43,205 - UnifiedPolicyServer - INFO - 推理观测 #5
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:43,220 - UnifiedPolicyServer - INFO - 动作块 #5 生成完成 | 推理耗时: 14.47ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889723.249247064] [realman_driver_node]: [DIAG-DRIVER-STATE] #3000: gripper_act_raw=1002, gripper_open=1.0000, last_gripper_cmd=999
+[realman_driver_node-1] [INFO] [1770889723.455599108] [realman_driver_node]: [DIAG-DRIVER-RECV] #150: gripper_float=0.9934, gripper_sdk=993, last_cmd=999, deadband=20, will_send=False, t=23234.267
+[dagger_node-6] [DIAG-ACTION-POP] exec#16: action.gripper=0.9997, obs_gripper=1.0000, delta=-0.0003, buf_size=17
+[dagger_node-6] [DIAG-PUBLISH] #17: gripper_float=0.9997, gripper_sdk_equiv=999, timestamp=23229.553
+[dagger_node-6] [DIAG-ACTION-POP] exec#17: action.gripper=1.0000, obs_gripper=1.0000, delta=-0.0000, buf_size=16
+[dagger_node-6] [DIAG-PUBLISH] #18: gripper_float=1.0000, gripper_sdk_equiv=999, timestamp=23229.585
+[dagger_node-6] [DIAG-ACTION-POP] exec#18: action.gripper=1.0001, obs_gripper=1.0000, delta=0.0001, buf_size=15
+[dagger_node-6] [DIAG-PUBLISH] #19: gripper_float=1.0001, gripper_sdk_equiv=1000, timestamp=23229.619
+[dagger_node-6] [DIAG-ACTION-POP] exec#19: action.gripper=1.0002, obs_gripper=1.0000, delta=0.0002, buf_size=14
+[dagger_node-6] [DIAG-PUBLISH] #20: gripper_float=1.0002, gripper_sdk_equiv=1000, timestamp=23229.652
+[dagger_node-6] [DIAG-CYCLE] #0: infer=37.8ms, wait=1031.8ms, total_cycle=1069.6ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #3: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=25.8ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#1 joints(deg): ['2.47', '1.07', '2.47', '55.47', '-0.11', '108.59', '3.94'], gripper: 1.000, obs_age=25.8ms, obs_count=43, max_delta=13.159deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #1: obs_build=3.51ms, pickle=2.00ms, grpc=24.51ms, parse=0.22ms, buf_update=0.01ms, t_inf_total=30.3ms, K_inf=16, valid=34, buf=34, ema=35.4ms, obs_age=25.8ms, obs_cnt=43, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#1: t_inf=0.030s, K_inf=16, chunk=50, valid=34
+[dagger_node-6]   action[0](deg):     ['2.57', '0.98', '2.60', '56.36', '-0.12', '107.94', '4.05']
+[dagger_node-6]   action[-1](deg):    ['4.94', '5.43', '4.94', '78.45', '-2.01', '81.79', '6.87']
+[dagger_node-6]   valid[0](deg):      ['4.11', '1.39', '4.34', '64.42', '-0.62', '100.13', '7.47']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9899, max=1.0009, first5=['0.990', '0.994', '0.996', '0.996', '0.996']
+[dagger_node-6]   gripper_valid: min=0.9977, max=1.0009, first5=['0.999', '0.999', '0.999', '0.998', '0.998']
+[dagger_node-6] [DIAG-PUBLISH] #50: gripper_float=0.9995, gripper_sdk_equiv=999, timestamp=23230.785
+[dagger_node-6] [DIAG-ACTION-POP] exec#50: action.gripper=0.9995, obs_gripper=1.0000, delta=-0.0005, buf_size=12
+[dagger_node-6] [DIAG-CYCLE] #1: infer=30.5ms, wait=1143.8ms, total_cycle=1174.3ms, reason=T_inter_expired
+[dagger_node-6] [DIAG-OBS-BUILD] #4: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=29.7ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#2 joints(deg): ['4.57', '2.42', '4.85', '69.60', '-1.41', '93.53', '7.23'], gripper: 1.000, obs_age=29.7ms, obs_count=71, max_delta=15.058deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #2: obs_build=0.80ms, pickle=2.02ms, grpc=27.54ms, parse=0.42ms, buf_update=0.01ms, t_inf_total=30.9ms, K_inf=16, valid=34, buf=34, ema=34.1ms, obs_age=29.7ms, obs_cnt=71, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#2: t_inf=0.031s, K_inf=16, chunk=50, valid=34
+[dagger_node-6]   action[0](deg):     ['4.67', '2.49', '4.97', '70.21', '-1.43', '92.89', '7.55']
+[dagger_node-6]   action[-1](deg):    ['5.37', '10.81', '5.22', '88.18', '-2.75', '67.28', '8.83']
+[dagger_node-6]   valid[0](deg):      ['5.75', '4.13', '6.05', '77.24', '-1.48', '84.84', '10.77']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9515, max=1.0006, first5=['0.951', '0.967', '0.972', '0.977', '0.979']
+[dagger_node-6]   gripper_valid: min=0.9985, max=1.0006, first5=['1.000', '0.999', '0.999', '0.999', '0.999']
+[dagger_node-6] [DIAG-STATE-READ] #100: gripper_from_ros2=1.0000, joints[0]=4.67deg
+[dagger_node-6] [TIMING-OBS-FEED] #100: state=0.02ms, img_copy=0.55ms, bridge_update=0.30ms, total=0.86ms, gripper=1.0000
+[dagger_node-6] [DIAG-CYCLE] #2: infer=31.0ms, wait=931.0ms, total_cycle=961.9ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #5: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=25.8ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#3 joints(deg): ['5.64', '6.23', '5.84', '80.27', '-1.71', '79.37', '9.57'], gripper: 1.000, obs_age=25.8ms, obs_count=100, max_delta=14.165deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #3: obs_build=0.29ms, pickle=1.51ms, grpc=21.63ms, parse=0.15ms, buf_update=0.02ms, t_inf_total=23.7ms, K_inf=15, valid=35, buf=35, ema=31.0ms, obs_age=25.8ms, obs_cnt=100, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#3: t_inf=0.024s, K_inf=15, chunk=50, valid=35
+[dagger_node-6]   action[0](deg):     ['5.76', '6.33', '5.95', '80.87', '-1.72', '78.73', '9.66']
+[dagger_node-6]   action[-1](deg):    ['7.60', '17.12', '6.40', '94.50', '-4.03', '55.06', '11.97']
+[dagger_node-6]   valid[0](deg):      ['6.64', '9.23', '6.89', '86.52', '-2.03', '70.83', '11.96']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9556, max=1.0020, first5=['0.956', '0.970', '0.975', '0.977', '0.980']
+[dagger_node-6]   gripper_valid: min=0.9981, max=1.0020, first5=['0.998', '0.998', '0.999', '0.999', '0.999']
+[dagger_node-6] [DIAG-PUBLISH] #100: gripper_float=0.9991, gripper_sdk_equiv=999, timestamp=23232.593
+[dagger_node-6] [TIMING-EXEC] #100: mode_lock=0.00ms, pop=0.00ms, execute=0.17ms, total_work=0.20ms, buf=19, actual_hz=26.9
+[dagger_node-6] [DIAG-ACTION-POP] exec#100: action.gripper=0.9994, obs_gripper=1.0000, delta=-0.0006, buf_size=18
+[dagger_node-6] [DIAG-CYCLE] #3: infer=23.8ms, wait=942.6ms, total_cycle=966.3ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #6: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=26.0ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#4 joints(deg): ['7.11', '12.13', '6.92', '88.61', '-2.76', '65.84', '11.77'], gripper: 1.000, obs_age=26.0ms, obs_count=129, max_delta=13.524deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #4: obs_build=0.29ms, pickle=1.35ms, grpc=22.68ms, parse=0.16ms, buf_update=0.00ms, t_inf_total=24.6ms, K_inf=15, valid=35, buf=35, ema=29.0ms, obs_age=26.0ms, obs_cnt=129, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#4: t_inf=0.025s, K_inf=15, chunk=50, valid=35
+[dagger_node-6]   action[0](deg):     ['7.18', '12.19', '6.96', '89.04', '-2.73', '65.32', '11.80']
+[dagger_node-6]   action[-1](deg):    ['7.04', '23.33', '6.35', '99.72', '-3.61', '42.62', '9.22']
+[dagger_node-6]   valid[0](deg):      ['7.74', '14.93', '7.42', '93.73', '-2.97', '58.28', '12.28']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9890, max=1.0026, first5=['0.989', '0.993', '0.994', '0.993', '0.994']
+[dagger_node-6]   gripper_valid: min=0.9966, max=1.0026, first5=['0.997', '0.997', '0.997', '0.997', '0.997']
+[dagger_node-6] [DIAG-CYCLE] #4: infer=24.7ms, wait=951.5ms, total_cycle=976.2ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #7: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=1.9ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#5 joints(deg): ['7.98', '18.49', '7.23', '95.63', '-3.67', '52.52', '11.00'], gripper: 1.000, obs_age=1.9ms, obs_count=159, max_delta=13.320deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #5: obs_build=0.37ms, pickle=1.28ms, grpc=22.30ms, parse=0.19ms, buf_update=0.01ms, t_inf_total=24.2ms, K_inf=15, valid=35, buf=35, ema=27.6ms, obs_age=1.9ms, obs_cnt=159, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#5: t_inf=0.024s, K_inf=15, chunk=50, valid=35
+[dagger_node-6]   action[0](deg):     ['8.02', '18.80', '7.22', '95.72', '-3.58', '52.09', '11.02']
+[dagger_node-6]   action[-1](deg):    ['6.95', '29.60', '7.02', '101.57', '-3.79', '33.74', '7.63']
+[dagger_node-6]   valid[0](deg):      ['8.54', '22.12', '7.54', '98.19', '-3.61', '45.68', '11.25']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.9774, max=1.0016, first5=['0.977', '0.984', '0.988', '0.989', '0.991']
+[dagger_node-6]   gripper_valid: min=0.9923, max=1.0016, first5=['0.994', '0.993', '0.993', '0.992', '0.992']
+[dagger_node-6] [DIAG-PUBLISH] #150: gripper_float=0.9934, gripper_sdk_equiv=993, timestamp=23234.267
+[dagger_node-6] [DIAG-ACTION-POP] exec#150: action.gripper=0.9951, obs_gripper=1.0000, delta=-0.0049, buf_size=27
+[dagger_node-6] [DIAG-STATE-READ] #200: gripper_from_ros2=1.0000, joints[0]=8.23deg
+[dagger_node-6] [DIAG-CYCLE] #5: infer=24.3ms, wait=973.2ms, total_cycle=997.5ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #8: gripper_raw=1.0000, gripper_clipped=1.0000, obs_age=33.3ms, must_go=False
+[policy_server-5] 2026-02-12 17:48:44,197 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:44,202 - UnifiedPolicyServer - INFO - 推理观测 #6
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:44,217 - UnifiedPolicyServer - INFO - 动作块 #6 生成完成 | 推理耗时: 14.53ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889724.862102247] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #2: pos=970, result=0, queue_wait=49.9ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889724.929304272] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #3: pos=935, result=0, queue_wait=66.2ms, send_latency=0.5ms
+[realman_driver_node-1] [INFO] [1770889724.995889650] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #4: pos=892, result=0, queue_wait=65.9ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889725.030096740] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #5: pos=871, result=0, queue_wait=32.9ms, send_latency=0.4ms
+[realman_driver_node-1] [INFO] [1770889725.096705482] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #6: pos=825, result=0, queue_wait=65.9ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889725.129655282] [realman_driver_node]: [DIAG-DRIVER-RECV] #200: gripper_float=0.8013, gripper_sdk=801, last_cmd=825, deadband=20, will_send=True, t=23235.941
+[realman_driver_node-1] [INFO] [1770889725.130489879] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #7: pos=801, result=0, queue_wait=33.2ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889725.164298301] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #8: pos=768, result=0, queue_wait=33.1ms, send_latency=0.1ms
+[policy_server-5] 2026-02-12 17:48:45,173 - root - INFO - <Logger UnifiedPolicyServer (INFO)> Starting receiver
+[policy_server-5] 2026-02-12 17:48:45,177 - UnifiedPolicyServer - INFO - 推理观测 #7
+[policy_server-5] [Adapter] ✅ 从 train_config 加载 delta_mask: [ True  True  True  True  True  True  True False]
+[policy_server-5] [Adapter]    Delta 维度（累加）: [0, 1, 2, 3, 4, 5, 6]
+[policy_server-5] [Adapter]    绝对值维度（直接使用）: [7]
+[policy_server-5] 2026-02-12 17:48:45,191 - UnifiedPolicyServer - INFO - 动作块 #7 生成完成 | 推理耗时: 13.34ms | 动作数: 50
+[realman_driver_node-1] [INFO] [1770889725.198045187] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #9: pos=593, result=0, queue_wait=33.0ms, send_latency=0.2ms
+[realman_driver_node-1] [INFO] [1770889725.230982534] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #10: pos=566, result=0, queue_wait=32.4ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889725.248899897] [realman_driver_node]: [DIAG-DRIVER-STATE] #3200: gripper_act_raw=864, gripper_open=0.8640, last_gripper_cmd=566
+[realman_driver_node-1] [INFO] [1770889725.264643830] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #11: pos=544, result=0, queue_wait=33.0ms, send_latency=0.1ms
+[realman_driver_node-1] [INFO] [1770889725.298423698] [realman_driver_node]: [DIAG-DRIVER-GRIP-SEND] #12: pos=519, result=0, queue_wait=32.9ms, send_latency=0.2ms
+[dagger_node-6] [INFO] [1770889725.330631706] [dagger_node]: [PolicyExecLoop] Stopped
+[dagger_node-6] [INFO] [1770889725.331085678] [dagger_node]: [pause_session] 推理已暂停（连接保持），录制已暂停（99 帧）
+[vr_input_node-2] [INFO] [1770889726.771884564] [vr_input_node]: [VR 输入] USB/ADB | 正常 | 已接收: 2838 条 | 错误: 0 次
+[realman_driver_node-1] [INFO] [1770889727.249144735] [realman_driver_node]: [DIAG-DRIVER-STATE] #3400: gripper_act_raw=521, gripper_open=0.5210, last_gripper_cmd=519
+[dagger_node-6] [INFO] [1770889728.129072971] [dagger_node]: [DAgger] mode=POLICY/standby | cmds=205 | buf=31 | infers=8 | t_inf_avg=0.027s | rec=REC | episodes=0 | frames=99
+[realman_driver_node-1] [INFO] [1770889729.248990508] [realman_driver_node]: [DIAG-DRIVER-STATE] #3600: gripper_act_raw=521, gripper_open=0.5210, last_gripper_cmd=519
+[dagger_node-6] [INFO] [1770889729.297902422] [dagger_node]: [stop_session] 禁用 driver follow...
+[realman_driver_node-1] [INFO] [1770889729.298707664] [realman_driver_node]: ⏸️ 跟随已停止，操作者可以休息
+[dagger_node-6] [WARN] [1770889730.299935691] [dagger_node]: /driver/disable_follow call timed out
+[dagger_node-6] [INFO] [1770889730.300300536] [dagger_node]: [stop_session] 会话已停止（POLICY → IDLE），录制已暂停（99 帧）
+[realman_driver_node-1] [INFO] [1770889730.339302667] [realman_driver_node]: [UDP] 正常 | 已接收: 7391 条 | 错误: 0 次 | 模式: 低跟随
+[dagger_node-6] [INFO] [1770889731.127361412] [dagger_node]: Recording episode discarded (99 frames)
+[realman_driver_node-1] [INFO] [1770889731.249030661] [realman_driver_node]: [DIAG-DRIVER-STATE] #3800: gripper_act_raw=521, gripper_open=0.5210, last_gripper_cmd=519
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[policy_server-5] 2026-02-12 17:48:52,281 - main - INFO - 收到中断信号，正在停止...
+[policy_server-5] 2026-02-12 17:48:52,282 - UnifiedPolicyServer - INFO - 服务器已停止
+[policy_server-5] 2026-02-12 17:48:52,282 - main - INFO - 服务器已终止
+[vr_input_node-2] [INFO] [1770889732.282347300] [vr_input_node]: 正在关闭 VR 输入节点...
+[vr_input_node-2] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [INFO] [1770889732.282413895] [dagger_node]: Shutting down DAgger node...
+[dagger_node-6] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [INFO] [1770889732.283262608] [dagger_node]: DAggerRecorder closed
+[dagger_node-6] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[realman_driver_node-1] [INFO] [1770889732.282419766] [realman_driver_node]: 🛑 正在关闭驱动节点...
+[realman_driver_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[dagger_node-6] [DIAG-OBS] infer#6 joints(deg): ['8.34', '24.96', '7.48', '99.26', '-4.04', '41.24', '9.81'], gripper: 1.000, obs_age=33.3ms, obs_count=188, max_delta=11.284deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #6: obs_build=0.50ms, pickle=2.28ms, grpc=20.26ms, parse=0.18ms, buf_update=0.00ms, t_inf_total=23.4ms, K_inf=15, valid=35, buf=35, ema=26.3ms, obs_age=33.3ms, obs_cnt=188, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#6: t_inf=0.023s, K_inf=15, chunk=50, valid=35
+[dagger_node-6]   action[0](deg):     ['8.30', '25.34', '7.44', '99.25', '-3.94', '40.88', '9.74']
+[dagger_node-6]   action[-1](deg):    ['8.27', '32.88', '5.46', '103.19', '-4.04', '30.02', '10.05']
+[dagger_node-6]   valid[0](deg):      ['7.75', '29.06', '7.89', '100.88', '-3.08', '35.46', '8.87']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=1.0000, clipped=1.0000
+[dagger_node-6]   gripper_all:   min=0.6316, max=0.9988, first5=['0.974', '0.981', '0.984', '0.985', '0.985']
+[dagger_node-6]   gripper_valid: min=0.6316, max=0.9988, first5=['0.990', '0.992', '0.991', '0.994', '0.996']
+[dagger_node-6] [TIMING-OBS-FEED] #200: state=0.01ms, img_copy=0.18ms, bridge_update=0.23ms, total=0.42ms, gripper=1.0000
+[dagger_node-6] [DIAG-PUBLISH] #200: gripper_float=0.8013, gripper_sdk_equiv=801, timestamp=23235.941
+[dagger_node-6] [TIMING-EXEC] #200: mode_lock=0.00ms, pop=0.00ms, execute=0.17ms, total_work=0.20ms, buf=7, actual_hz=28.3
+[dagger_node-6] [DIAG-ACTION-POP] exec#200: action.gripper=0.7689, obs_gripper=0.9120, delta=-0.1431, buf_size=6
+[dagger_node-6] [DIAG-CYCLE] #6: infer=23.5ms, wait=953.2ms, total_cycle=976.7ms, reason=buf_drain(6<=6)
+[dagger_node-6] [DIAG-OBS-BUILD] #9: gripper_raw=0.9120, gripper_clipped=0.9120, obs_age=9.7ms, must_go=False
+[dagger_node-6] [DIAG-OBS] infer#7 joints(deg): ['8.82', '30.41', '7.08', '101.93', '-4.25', '32.78', '9.34'], gripper: 0.912, obs_age=9.7ms, obs_count=218, max_delta=8.457deg, images: ['cam1_rgb', 'cam0_rgb'], img_shapes: [(480, 640, 3), (480, 640, 3)]
+[dagger_node-6] [TIMING-INFER-BRIDGE] #7: obs_build=0.34ms, pickle=1.61ms, grpc=19.08ms, parse=0.23ms, buf_update=0.01ms, t_inf_total=21.3ms, K_inf=15, valid=35, buf=35, ema=24.8ms, obs_age=9.7ms, obs_cnt=218, T_inter=1173ms, feasible=True
+[dagger_node-6] [DIAG-ACT] infer#7: t_inf=0.021s, K_inf=15, chunk=50, valid=35
+[dagger_node-6]   action[0](deg):     ['8.85', '30.41', '6.98', '101.94', '-4.19', '32.81', '9.32']
+[dagger_node-6]   action[-1](deg):    ['7.37', '25.77', '4.92', '102.64', '-3.43', '34.87', '9.00']
+[dagger_node-6]   valid[0](deg):      ['8.64', '31.95', '7.00', '101.73', '-3.77', '32.83', '8.65']
+[dagger_node-6]   action_space=joints, action_type=absolute
+[dagger_node-6]   obs_gripper: raw=0.9120, clipped=0.9120
+[dagger_node-6]   gripper_all:   min=0.4160, max=0.9068, first5=['0.907', '0.905', '0.891', '0.874', '0.856']
+[dagger_node-6]   gripper_valid: min=0.4160, max=0.5939, first5=['0.594', '0.566', '0.544', '0.519', '0.504']
+[dagger_node-6] [InferenceBridge] Inference paused
+[dagger_node-6] [DIAG-CYCLE] #7: infer=21.4ms, wait=141.0ms, total_cycle=162.4ms, reason=paused
+[dagger_node-6] [DIAG-STATE-READ] #300: gripper_from_ros2=0.5210, joints[0]=8.58deg
+[dagger_node-6] [TIMING-OBS-FEED] #300: state=0.02ms, img_copy=0.25ms, bridge_update=0.27ms, total=0.54ms, gripper=0.5220
+[dagger_node-6] [InferenceBridge] Inference thread stopped
+[dagger_node-6] [InferenceBridge] Disconnected
+[realman_driver_node-1] [INFO] [1770889732.307220721] [realman_driver_node]: 🔌 正在关闭 RM+ 生态协议...

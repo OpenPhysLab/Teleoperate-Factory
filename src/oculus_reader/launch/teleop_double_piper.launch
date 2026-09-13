@@ -1,0 +1,17 @@
+<launch>
+  <!-- Legacy Piper entry point. Use teleop_double_rm75.launch for RM75. -->
+  <include file="$(find piper)/launch/start_double_piper.launch" />
+  <node name="teleop_double_piper_node" pkg="oculus_reader"
+        type="teleop_double_piper.py" output="screen">
+    <param name="robot_backend" value="joint_state" />
+    <param name="robot_model" value="piper" />
+    <param name="arm_dof" value="6" />
+    <rosparam param="joint_names">[joint1, joint2, joint3, joint4, joint5, joint6]</rosparam>
+    <param name="left_joint_command_topic" value="/left_joint_states" />
+    <param name="right_joint_command_topic" value="/right_joint_states" />
+    <param name="joint_state_has_gripper" value="true" />
+  </node>
+  <node name="pub_pose_node" pkg="oculus_reader" type="pub_pose.py" output="screen" />
+  <node name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find oculus_reader)/config/oculus_reader.rviz" />
+</launch>

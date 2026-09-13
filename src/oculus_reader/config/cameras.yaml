@@ -1,0 +1,34 @@
+# ROS-free camera inventory for the current workstation.
+# RealSense exposes several V4L2 nodes per physical device; test_cameras.py
+# checks every node and reports which ones actually deliver frames.
+capture:
+  # RealSense global_time timestamps are used by default. Set backend: v4l2
+  # only when running without the pyrealsense2 SDK.
+  fps: 25
+  fourcc: MJPG
+  width: 640
+  height: 480
+  # The three free-running color streams show a stable ~10-18 ms phase span.
+  # 18 ms keeps the 25 Hz output decimator supplied with enough groups.
+  sync_window_ms: 18
+  queue_size: 5
+  backend: realsense
+cameras:
+  - name: d435
+    model: Intel RealSense D435
+    serial: unknown
+    video_devices: [/dev/video2, /dev/video3, /dev/video4, /dev/video5, /dev/video6, /dev/video7]
+    preferred_nodes: [/dev/video4, /dev/video6]
+    capture_device: /dev/video4
+  - name: d405_235123074600
+    model: Intel RealSense D405
+    serial: "235123074600"
+    video_devices: [/dev/video8, /dev/video9, /dev/video10, /dev/video11, /dev/video12, /dev/video13]
+    preferred_nodes: [/dev/video10, /dev/video12]
+    capture_device: /dev/video10
+  - name: d405_235123071832
+    model: Intel RealSense D405
+    serial: "235123071832"
+    video_devices: [/dev/video14, /dev/video15, /dev/video16, /dev/video17, /dev/video18, /dev/video19]
+    preferred_nodes: [/dev/video16, /dev/video18]
+    capture_device: /dev/video16

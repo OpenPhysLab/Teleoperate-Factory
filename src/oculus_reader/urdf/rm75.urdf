@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+  Kinematic RM75 model used by the teleoperation IK.
+
+  The dimensions and joint axes are the official RM75 MDH model (the
+  standard RM75 variant: d7 = 144 mm).  Visual/collision meshes are
+  intentionally not bundled here; the official rm_description package can be
+  used for visualization, while this lightweight model keeps IK usable on a
+  headless controller and avoids an extra mesh dependency.
+-->
+<robot name="rm75_teleop">
+  <link name="base_link">
+    <inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial>
+  </link>
+  <link name="Link1"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint1" type="revolute">
+    <origin xyz="0 0 0.2405" rpy="-1.57079632679 0 0"/><parent link="base_link"/><child link="Link1"/><axis xyz="0 -1 0"/>
+    <limit lower="-3.106686" upper="3.106686" effort="60" velocity="3.141593"/>
+  </joint>
+  <link name="Link2"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint2" type="revolute">
+    <origin xyz="0 0 0" rpy="1.57079632679 0 0"/><parent link="Link1"/><child link="Link2"/><axis xyz="0 1 0"/>
+    <limit lower="-2.268928" upper="2.268928" effort="60" velocity="3.141593"/>
+  </joint>
+  <link name="Link3"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint3" type="revolute">
+    <origin xyz="0 0 0.256" rpy="-1.57079632679 0 0"/><parent link="Link2"/><child link="Link3"/><axis xyz="0 -1 0"/>
+    <limit lower="-3.106686" upper="3.106686" effort="30" velocity="3.926991"/>
+  </joint>
+  <link name="Link4"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint4" type="revolute">
+    <origin xyz="0 0 0" rpy="1.57079632679 0 0"/><parent link="Link3"/><child link="Link4"/><axis xyz="0 1 0"/>
+    <limit lower="-2.356194" upper="2.356194" effort="30" velocity="3.926991"/>
+  </joint>
+  <link name="Link5"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint5" type="revolute">
+    <origin xyz="0 0 0.210" rpy="-1.57079632679 0 0"/><parent link="Link4"/><child link="Link5"/><axis xyz="0 -1 0"/>
+    <limit lower="-3.106686" upper="3.106686" effort="10" velocity="3.926991"/>
+  </joint>
+  <link name="Link6"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint6" type="revolute">
+    <origin xyz="0 0 0" rpy="1.57079632679 0 0"/><parent link="Link5"/><child link="Link6"/><axis xyz="0 1 0"/>
+    <limit lower="-2.234021" upper="2.234021" effort="10" velocity="3.926991"/>
+  </joint>
+  <link name="Link7"><inertial><mass value="0.1"/><origin xyz="0 0 0"/><inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/></inertial></link>
+  <joint name="joint7" type="revolute">
+    <origin xyz="0 0 0.144" rpy="0 0 0"/><parent link="Link6"/><child link="Link7"/><axis xyz="0 0 1"/>
+    <limit lower="-6.283185" upper="6.283185" effort="10" velocity="3.926991"/>
+  </joint>
+</robot>

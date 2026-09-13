@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oculus_reader</name>
+  <version>0.0.1</version>
+  <description>The oculus_reader package</description>
+
+  <maintainer email="TODO@mail.com">TODO</maintainer>
+
+  <license>Apache-2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>tf</depend>
+  <depend>tf2_ros</depend>
+  <!-- Runtime-only, optional when robot_backend is joint_state or dry_run. -->
+  <exec_depend>rm_msgs</exec_depend>
+</package>

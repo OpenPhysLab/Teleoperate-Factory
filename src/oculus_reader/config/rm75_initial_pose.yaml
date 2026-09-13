@@ -1,0 +1,9 @@
+# Captured from RM75 at 192.168.1.19.
+# Joint command units are degrees in the API2 layer; the controller converts
+# target_joint_state to degrees before sending.
+source_ip: 192.168.1.19
+source_captured_at: "2026-09-12"
+target_joint_state_deg: [-0.188, -38.298, 0.817, 74.502, -0.517, 99.280, 0.056]
+target_joint_state: [-0.003281219, -0.668426197, 0.014259340, 1.300305199, -0.009023352, 1.732762881, 0.000977384]
+initial_gripper_width: 0.07
+gripper_state: open
