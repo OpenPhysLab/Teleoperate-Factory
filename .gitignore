@@ -27,6 +27,7 @@ dist/
 .venv_*/
 .rm75_python/
 .tools/
+rm_models/
 venv/
 env/
 
