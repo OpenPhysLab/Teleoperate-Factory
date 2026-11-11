@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Quest A toggles RGB video + overhead depth recording; B toggles RM18 gripper."""
+"""Quest A starts recording, X saves/stops; B toggles the RM18 gripper."""
 from __future__ import annotations
 
 import argparse
@@ -88,7 +88,7 @@ class ButtonEdges:
     def update(self, buttons):
         if not buttons:
             return set()
-        current = {key: bool(buttons.get(key, False)) for key in ("A", "B")}
+        current = {key: bool(buttons.get(key, False)) for key in ("A", "B", "X")}
         # An already-held button at startup is consumed until released.
         edges = set() if self.previous is None else {
             key for key in current if current[key] and not self.previous[key]}
@@ -150,7 +150,7 @@ class Recording:
             "videos": videos, "depth": depths,
             "gripper_ip": ARM_IP, "gripper_commanded_closed": gripper.closed,
             "gripper_feedback": gripper.state,
-            "buttons": {key: bool(buttons.get(key, False)) for key in ("A", "B")},
+            "buttons": {key: bool(buttons.get(key, False)) for key in ("A", "B", "X")},
         }
         self.manifest.write(json.dumps(record) + "\n")
         self.manifest.flush()
@@ -260,7 +260,7 @@ def main(argv=None):
         failures = [w.error for w in workers if w.error]
         if failures:
             raise RuntimeError("camera startup failed: " + "; ".join(failures))
-        print("READY: A=start/stop recording; B=toggle RM18 gripper; Ctrl+C=save and quit",
+        print("READY: A=start recording; X=save/stop recording; B=toggle RM18 gripper; Ctrl+C=quit",
               flush=True)
         print("SESSION " + str(session), flush=True)
         event("ready", arm_ip=ARM_IP, initial_gripper=gripper.state, dry_run=args.dry_run)
@@ -281,17 +281,19 @@ def main(argv=None):
                     except Exception as exc:
                         event("gripper_error", message=str(exc))
                         print("GRIPPER_ERROR " + str(exc), flush=True)
-                if "A" in pressed:
+                # Stop has priority if start/stop are pressed together.
+                # Repeated A during recording and X while idle are harmless.
+                if "X" in pressed:
                     if recording.active:
                         recording.stop()
                         event("recording_stop", episode=recording.index)
-                    else:
-                        recording.start()
-                        for worker, buffer in zip(workers, buffers):
-                            _drain(worker, buffer)
-                            buffer.clear()
-                        last_group, accumulator = None, 1.0
-                        event("recording_start", episode=recording.index)
+                elif "A" in pressed and not recording.active:
+                    recording.start()
+                    for worker, buffer in zip(workers, buffers):
+                        _drain(worker, buffer)
+                        buffer.clear()
+                    last_group, accumulator = None, 1.0
+                    event("recording_start", episode=recording.index)
                 next_poll = now + 1 / 30
             if now >= next_feedback:
                 try:
@@ -317,7 +319,7 @@ def main(argv=None):
                         import cv2
                         preview = cv2.hconcat([f.image for f in group])
                         text = "REC" if recording.active else "IDLE"
-                        cv2.putText(preview, text + " | A: video  B: gripper18",
+                        cv2.putText(preview, text + " | A: start  X: save/stop  B: gripper18",
                                     (20, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
                         cv2.namedWindow("RM18 gripper recorder", cv2.WINDOW_NORMAL)
                         cv2.imshow("RM18 gripper recorder", preview)
