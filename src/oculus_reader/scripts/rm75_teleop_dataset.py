@@ -41,7 +41,7 @@ import rm_api2_teleop as teleop
 from oculus_reader import OculusReader
 from synchronized_cameras import (CameraWorker, RealSenseWorker,
                                   _camera_device_candidates, _drain,
-                                  _load_config, _pop_synchronized)
+                                  _load_config, _pop_synchronized, _save_depth_frames)
 
 
 STOP = False
@@ -82,6 +82,9 @@ def _make_workers(capture, cameras, args):
             backend = "realsense"
         except ImportError:
             backend = "v4l2"
+    if backend != "realsense" and not getattr(args, "no_depth", False) and any(
+            camera.get("record_depth", False) for camera in cameras):
+        raise ValueError("depth recording requires realsense; use --no-depth for V4L2")
     if backend not in ("realsense", "v4l2"):
         raise ValueError("backend must be realsense, v4l2, or auto")
     names = [str(camera.get("name", "camera{}".format(index)))
@@ -90,7 +93,9 @@ def _make_workers(capture, cameras, args):
     if backend == "realsense":
         workers = [RealSenseWorker(
             name, paths, camera.get("realsense_serial") or camera.get("sdk_serial"),
-            fps, width, height, queue_size)
+            fps, width, height, queue_size,
+            record_depth=bool(camera.get("record_depth", False) and
+                              not getattr(args, "no_depth", False)))
             for name, paths, camera in zip(names, candidates, cameras)]
     else:
         fourcc = str(capture.get("fourcc", "MJPG"))
@@ -362,6 +367,8 @@ def main(argv=None):
                         help="with --interactive, wait for 's' before recording/motion")
     parser.add_argument("--no-robot", action="store_true",
                         help="record Quest + cameras without connecting/commanding RM75")
+    parser.add_argument("--no-depth", action="store_true",
+                        help="disable configured depth capture and recording")
     parser.add_argument("--dry-run", action="store_true",
                         help="run IK and print commands without moving RM75")
     parser.add_argument("--skip-init-pose", action="store_true")
@@ -537,6 +544,7 @@ def main(argv=None):
                 "quest_buttons": _jsonable(latest_buttons),
                 "images": {},
             }
+            record["depth"] = _save_depth_frames(save_dir, frame_id, group, names)
             if args.save_images and not args.no_save_images:
                 import cv2
                 for name, frame in zip(names, group):

@@ -40,6 +40,8 @@ class Frame:
     sequence: int
     host_timestamp_ns: int = 0
     timestamp_domain: str = "host_monotonic"
+    depth: object = None
+    depth_metadata: object = None
 
 
 class CameraWorker(threading.Thread):
@@ -170,9 +172,11 @@ class RealSenseWorker(CameraWorker):
     """RealSense SDK worker using comparable global hardware timestamps."""
 
     def __init__(self, name: str, devices: Sequence[str], serial: Optional[str],
-                 fps: float, width: int, height: int, queue_size: int):
+                 fps: float, width: int, height: int, queue_size: int,
+                 record_depth: bool = False):
         super().__init__(name, devices, fps, width, height, queue_size,
                          backend="realsense")
+        self.record_depth = bool(record_depth)
         self.requested_serial = str(serial) if serial else None
         self._pipeline = None
 
@@ -219,13 +223,50 @@ class RealSenseWorker(CameraWorker):
             stream_fps = 30 if self.fps <= 30 else int(round(self.fps))
             config.enable_stream(rs.stream.color, self.width, self.height,
                                  rs.format.bgr8, stream_fps)
+            if self.record_depth:
+                config.enable_stream(rs.stream.depth, self.width, self.height,
+                                     rs.format.z16, stream_fps)
             pipeline = rs.pipeline(context)
-            pipeline.start(config)
+            profile = pipeline.start(config)
+            self._pipeline = pipeline
+            align = rs.align(rs.stream.color) if self.record_depth else None
+            depth_calibration = None
+            if self.record_depth:
+                color_profile = profile.get_stream(rs.stream.color).as_video_stream_profile()
+                depth_profile = profile.get_stream(rs.stream.depth).as_video_stream_profile()
+                extrinsics = depth_profile.get_extrinsics_to(color_profile)
+                depth_calibration = {
+                    "encoding": "uint16_png",
+                    "scale_meters_per_unit": float(
+                        profile.get_device().first_depth_sensor().get_depth_scale()),
+                    "invalid_value": 0,
+                    "aligned_to": "color",
+                    "color_intrinsics": _intrinsics_dict(color_profile.get_intrinsics()),
+                    "native_depth_intrinsics": _intrinsics_dict(depth_profile.get_intrinsics()),
+                    "depth_to_color_extrinsics": {
+                        "rotation_column_major": list(extrinsics.rotation),
+                        "translation_m": list(extrinsics.translation)},
+                    "source_serial": self.source_serial,
+                }
             self._pipeline = pipeline
             self.ready_event.set()
             sequence = 0
             while not self.stop_event.is_set():
                 frames = pipeline.wait_for_frames(1000)
+                depth_image, depth_metadata = None, None
+                if align is not None:
+                    # Use one frameset: never attach a later depth image to RGB.
+                    frames = align.process(frames)
+                    depth = frames.get_depth_frame()
+                    if not depth:
+                        continue
+                    depth_image = np.asanyarray(depth.get_data()).copy()
+                    depth_metadata = dict(depth_calibration,
+                        intrinsics=_intrinsics_dict(
+                            depth.profile.as_video_stream_profile().get_intrinsics()),
+                        timestamp_ns=int(round(depth.get_timestamp() * 1e6)),
+                        timestamp_domain=str(depth.get_frame_timestamp_domain()).split(".")[-1],
+                        sequence=int(depth.get_frame_number()))
                 color = frames.get_color_frame()
                 if not color:
                     continue
@@ -242,7 +283,8 @@ class RealSenseWorker(CameraWorker):
                 self.timestamp_domain = domain
                 self._put_latest(Frame(timestamp_ns,
                                        np.asanyarray(color.get_data()).copy(),
-                                       sequence, host_timestamp_ns, domain))
+                                       sequence, host_timestamp_ns, domain,
+                                       depth_image, depth_metadata))
         except Exception as exc:
             self.error = "RealSense {}: {}".format(self.device, exc)
             self.ready_event.set()
@@ -341,6 +383,36 @@ def _drain(worker: CameraWorker, buffer: Deque[Frame]) -> None:
             return
 
 
+def _intrinsics_dict(intrinsics) -> dict:
+    return {key: getattr(intrinsics, key)
+            for key in ("width", "height", "fx", "fy", "ppx", "ppy")} | {
+                "distortion_model": str(intrinsics.model),
+                "distortion_coefficients": list(intrinsics.coeffs)}
+
+
+def _save_depth_frames(save_dir: Path, frame_id: int, group: Sequence[Frame],
+                       names: Sequence[str]) -> dict:
+    """Save metric Z16 values losslessly; independent of RGB JPEG saving."""
+    import cv2
+    import numpy as np
+
+    saved = {}
+    for name, frame in zip(names, group):
+        if frame.depth is None:
+            continue
+        if frame.depth.dtype != np.uint16 or frame.depth.ndim != 2:
+            raise ValueError("depth for {} must be a uint16 image".format(name))
+        if frame.depth.shape != frame.image.shape[:2]:
+            raise ValueError("aligned depth shape differs from RGB for {}".format(name))
+        relative = Path("depth") / "{:08d}_{}.png".format(frame_id, name)
+        path = save_dir / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not cv2.imwrite(str(path), frame.depth, [cv2.IMWRITE_PNG_COMPRESSION, 1]):
+            raise IOError("failed to write {}".format(path))
+        saved[name] = dict(frame.depth_metadata or {}, path=relative.as_posix())
+    return saved
+
+
 def _save_group(save_dir: Path, frame_id: int, group: Sequence[Frame],
                 names: Sequence[str], span_ns: int, jpeg_quality: int) -> dict:
     import cv2
@@ -364,6 +436,7 @@ def _save_group(save_dir: Path, frame_id: int, group: Sequence[Frame],
         "sequences": {name: frame.sequence for name, frame in zip(names, group)},
         "sync_span_ms": span_ns / 1e6,
         "images": images,
+        "depth": _save_depth_frames(save_dir, frame_id, group, names),
     }
 
 
@@ -384,6 +457,8 @@ def _build_parser() -> argparse.ArgumentParser:
                         help="per-camera queue size; default from config")
     parser.add_argument("--save-dir", default="",
                         help="write JPEGs and manifest.jsonl to this directory")
+    parser.add_argument("--no-depth", action="store_true",
+                        help="disable configured depth capture and recording")
     parser.add_argument("--jpeg-quality", type=int, default=95)
     parser.add_argument("--display", action="store_true",
                         help="show a concatenated preview; press q or ESC to stop")
@@ -421,6 +496,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             backend = "realsense"
         except ImportError:
             backend = "v4l2"
+    if backend != "realsense" and not args.no_depth and any(
+            camera.get("record_depth", False) for camera in camera_config):
+        print("depth recording requires realsense; use --no-depth for V4L2", file=sys.stderr)
+        return 2
     if backend not in ("realsense", "v4l2"):
         print("backend must be realsense, v4l2, or auto", file=sys.stderr)
         return 2
@@ -438,7 +517,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         workers = [RealSenseWorker(
             name, candidates,
             camera.get("realsense_serial") or camera.get("sdk_serial"),
-            fps, width, height, queue_size)
+            fps, width, height, queue_size,
+            record_depth=bool(camera.get("record_depth", False) and not args.no_depth))
             for name, candidates, camera in zip(names, device_candidates, camera_config)]
     else:
         workers = [CameraWorker(name, candidates, fps, width, height, queue_size,
@@ -527,6 +607,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 saved = _save_group(save_dir, frame_id, group, names, span_ns,
                                     max(1, min(100, args.jpeg_quality)))
                 record["images"] = saved["images"]
+                record["depth"] = saved["depth"]
                 manifest.write(json.dumps(record, ensure_ascii=False) + "\n")
                 manifest.flush()
             if args.display:
